@@ -74,7 +74,7 @@ Plan: Initial Setup for Project Start
 * [x] Create MVP for project. What do you need to get the functionality for the project working and what can wait?
 * [x] Unable to locate API, will be using manual data.
 * [x] Create basic angular project connected to Firebase
-* [ ] Add Angular Material to project
+* [x] Add Angular Material to project
 * [ ] Create initial designs for the project
 
 Minimum Viable Product
