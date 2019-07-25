@@ -14,10 +14,22 @@ import { environment } from '../environments/environment';
 /* Importing Angular Material Modules */
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
+import { MainComponent } from './components/main/main.component';
+import { RegisterComponent } from './components/register/register.component';
+import { AccountComponent } from './components/account/account.component';
+import { LoginComponent } from './components/login/login.component';
+import { SubmitComponent } from './components/submit/submit.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MainComponent,
+    RegisterComponent,
+    AccountComponent,
+    LoginComponent,
+    SubmitComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
