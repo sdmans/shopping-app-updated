@@ -10,6 +10,7 @@ import { AccountComponent } from './components/account/account.component';
 import { LoginComponent } from './components/login/login.component';
 import { SubmitComponent } from './components/submit/submit.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { NavComponent } from './components/nav/nav.component';
 
 /* Importing modules for Angular Fire and Firebase */
 import { AngularFireModule } from '@angular/fire';
@@ -21,6 +22,11 @@ import { environment } from '../environments/environment';
 /* Importing Angular Material Modules */
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/material';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -30,7 +36,8 @@ import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/mat
     AccountComponent,
     LoginComponent,
     SubmitComponent,
-    ProfileComponent
+    ProfileComponent,
+    NavComponent
   ],
   imports: [
     BrowserModule,
@@ -41,7 +48,12 @@ import { MatButtonModule, MatCheckboxModule, MatInputModule } from '@angular/mat
     AppRoutingModule,
     MatButtonModule, 
     MatCheckboxModule,
-    MatInputModule
+    MatInputModule,
+    LayoutModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
