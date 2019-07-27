@@ -1,3 +1,6 @@
+$side-nav-break: 600px;
+$toolbar-nav-item-color: #ffffff;
+
 .sidenav-container {
   height: 100%;
 }
@@ -14,4 +17,23 @@
   position: sticky;
   top: 0;
   z-index: 1;
+}
+
+.app-title {
+  margin-right: 160px;
+}
+
+.md-nav-item {
+  flex: 1 1 auto;
+
+  a {
+    text-decoration: none;
+    color: $toolbar-nav-item-color;
+  }
+}
+
+@media(max-width: $side-nav-break) {
+.md-nav-item {
+  display: none;
+}
 }
