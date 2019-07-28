@@ -8,3 +8,18 @@ mat-grid-tile {
 mat-grid-tile:hover {
     background: $tile-hover-color;
 }
+
+.tile-icon {
+    font-size: 20px;
+}
+
+div.img-container {
+    display: block;
+    height: 80%;
+    width: 80%;
+    border: 1px solid #ffffff;
+}
+div.feature-container {
+    display: flex;
+    flex-direction: column;
+}
