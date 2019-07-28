@@ -16,4 +16,25 @@
   top: 0;
   z-index: 1;
 }
+
+.app-title {
+  margin-right: 160px;
+}
+
+.md-nav-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.md-nav-item a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .md-nav-item {
+    display: none;
+  }
+}
 /*# sourceMappingURL=nav.component.css.map */

@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=main.component.css.map */
+.flex-item {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+/*# sourceMappingURL=main.component.css.map */

@@ -1,3 +1,10 @@
+$tile-bg-color: #c1e1ec;
+$tile-hover-color: #5b8fa0;
+
 mat-grid-tile {
-    background: lightblue;
+    background: $tile-bg-color;
+}
+
+mat-grid-tile:hover {
+    background: $tile-hover-color;
 }
