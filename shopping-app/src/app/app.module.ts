@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule }   from '@angular/forms';//To enable template-driven from features such as ngModel
+
 import { AppRoutingModule } from './app-routing.module';
 /* Imported components */
 import { AppComponent } from './app.component';
@@ -11,6 +13,7 @@ import { LoginComponent } from './components/login/login.component';
 import { SubmitComponent } from './components/submit/submit.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { NavComponent } from './components/nav/nav.component';
+import { SubmitFormComponent } from './components/submit-form/submit-form.component';
 
 /* Importing modules for Angular Fire and Firebase */
 import { AngularFireModule } from '@angular/fire';
@@ -42,10 +45,12 @@ import { MatRadioModule } from '@angular/material/radio';
     LoginComponent,
     SubmitComponent,
     ProfileComponent,
-    NavComponent
+    NavComponent,
+    SubmitFormComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,//Gives application access to all template-driven forms and features including ngModel
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,

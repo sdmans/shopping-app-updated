@@ -1,0 +1,53 @@
+<h3>Item Submit Form</h3>
+
+<div class="submit-form-container">
+    <form>
+        <div class="submit-input-container">
+                <mat-form-field class="form-group">
+                  <input class="form-control" matInput placeholder="Item Name" required>
+                </mat-form-field>
+
+                <mat-form-field class="form-group">
+                    <input class="form-control" matInput placeholder="Link" required>
+                </mat-form-field>
+
+                <mat-form-field class="form-group">
+                        <input class="form-control" matInput placeholder="Image" required>
+                    </mat-form-field>
+
+                <mat-form-field class="form-group">
+                    <textarea class="form-control" matInput placeholder="Description" required></textarea>
+                </mat-form-field>
+                <mat-form-field class="form-group">
+                    <textarea class="form-control" matInput placeholder="Notes"></textarea>
+                </mat-form-field>
+
+                <mat-form-field class="form-group">
+                  <mat-select class="form-control" placeholder="Select a category" required>
+                      <!-- mat loops through an array of categories-->
+                        <mat-option *ngFor="let category of _categories" [value]="category">{{category | titlecase}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+
+                <mat-radio-group class="form-group" aria-label="Select an option">
+                    <p>Priority</p>
+                        <mat-radio-button class="form-control" value="1">Meh</mat-radio-button>
+                        <mat-radio-button class="form-control" value="2">Want it</mat-radio-button>
+                        <mat-radio-button class="form-control" value="3">Need it</mat-radio-button>
+                        <mat-radio-button class="form-control" value="4">Gotta Have it</mat-radio-button>
+                      </mat-radio-group>
+
+        </div>
+        <button type="submit" mat-raised-button>Submit</button>
+    </form>
+</div>
+<!-- Displays preview of item with the name, link, image and category properties-->
+<div class="item-preview-container">
+    <h3>Item Preview</h3>
+    <p><b>{{item.name | titlecase}}</b></p>
+    <img class="preview-img" src="{{item.image}}" alt="item.name">
+    <p>Category: {{item.category | titlecase}}</p>
+    <p>Here's a link to the <a href="{{item.link}}" target="_blank">item</a></p>
+</div>
+
+

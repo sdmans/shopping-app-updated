@@ -7,11 +7,15 @@ Notes?: String
 LastOrdered?: String
 */
 export class Item {
+    id?: string;
     name: string;
-    Description: string;
     link: string;
+    image: string;
+    description?: string;
     notes?: string;
+    category: string;
     quantity?: number;
+    datePosted?: number;
     lastOrdered?: number;
     purchasedBy?: string;
 }

@@ -1,0 +1,26 @@
+/* CSS for the material form. May become a separate component soon */
+.submit-form-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submit-input-container > * {
+    width: 100%;
+  }
+
+  .mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+
+  button {
+    margin: 20px;
+  }
+/* Styles for item preview */
+.item-preview-container {
+  border: 1px solid pink;
+}
+
+.preview-img {
+  height: 200px;
+  width: 200px;
+}
