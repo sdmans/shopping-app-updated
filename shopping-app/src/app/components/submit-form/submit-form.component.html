@@ -45,7 +45,8 @@
 <div class="item-preview-container">
     <h3>Item Preview</h3>
     <p><b>{{_item.name | titlecase}}</b></p>
-    <img class="preview-img" src="{{_item.image}}" alt="_item.name">
+    <!-- Produces placeholder image until non-broken image link is provided. Source: https://stackoverflow.com/questions/36429903/angular-2-check-if-image-url-is-valid-or-broken-->
+    <img class="preview-img" src="{{_item.image}}" onError="this.src='https://via.placeholder.com/200x200'" alt="_item.name">
     <p>Description</p>
     <p>{{_item.description}}</p>
     <p>Category: {{_item.category | titlecase}}</p>
