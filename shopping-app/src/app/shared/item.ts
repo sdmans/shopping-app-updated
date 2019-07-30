@@ -11,8 +11,9 @@ export class Item {
     name: string;
     link: string;
     image: string;
+    priority?: string;
     description?: string;
-    notes?: string;
+    note?: string;
     category: string;
     quantity?: number;
     datePosted?: number;

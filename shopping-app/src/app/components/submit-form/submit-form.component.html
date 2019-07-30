@@ -4,32 +4,32 @@
     <form>
         <div class="submit-input-container">
                 <mat-form-field class="form-group">
-                  <input class="form-control" matInput placeholder="Item Name" required>
+                  <input class="form-control" name="name" matInput placeholder="Item Name" required [(ngModel)]="_item.name">
                 </mat-form-field>
 
                 <mat-form-field class="form-group">
-                    <input class="form-control" matInput placeholder="Link" required>
+                    <input class="form-control" name="link" matInput placeholder="Link" required [(ngModel)]="_item.link">
                 </mat-form-field>
 
                 <mat-form-field class="form-group">
-                        <input class="form-control" matInput placeholder="Image" required>
+                        <input class="form-control" name="image" matInput placeholder="Image" required [(ngModel)]="_item.image">
                     </mat-form-field>
 
                 <mat-form-field class="form-group">
-                    <textarea class="form-control" matInput placeholder="Description" required></textarea>
+                    <textarea class="form-control" name="description" matInput placeholder="Description" required [(ngModel)]="_item.description"></textarea>
                 </mat-form-field>
                 <mat-form-field class="form-group">
-                    <textarea class="form-control" matInput placeholder="Notes"></textarea>
+                    <textarea class="form-control" name="note" matInput placeholder="Note" [(ngModel)]="_item.note"></textarea>
                 </mat-form-field>
 
                 <mat-form-field class="form-group">
-                  <mat-select class="form-control" placeholder="Select a category" required>
+                  <mat-select class="form-control" name="category" placeholder="Select a category" required [(ngModel)]="_item.category">
                       <!-- mat loops through an array of categories-->
                         <mat-option *ngFor="let category of _categories" [value]="category">{{category | titlecase}}</mat-option>
                   </mat-select>
                 </mat-form-field>
 
-                <mat-radio-group class="form-group" aria-label="Select an option">
+                <mat-radio-group class="form-group" name="priority" aria-label="Select an option" [(ngModel)]="_item.priority">
                     <p>Priority</p>
                         <mat-radio-button class="form-control" value="1">Meh</mat-radio-button>
                         <mat-radio-button class="form-control" value="2">Want it</mat-radio-button>
@@ -44,10 +44,15 @@
 <!-- Displays preview of item with the name, link, image and category properties-->
 <div class="item-preview-container">
     <h3>Item Preview</h3>
-    <p><b>{{item.name | titlecase}}</b></p>
-    <img class="preview-img" src="{{item.image}}" alt="item.name">
-    <p>Category: {{item.category | titlecase}}</p>
-    <p>Here's a link to the <a href="{{item.link}}" target="_blank">item</a></p>
+    <p><b>{{_item.name | titlecase}}</b></p>
+    <img class="preview-img" src="{{_item.image}}" alt="_item.name">
+    <p>Description</p>
+    <p>{{_item.description}}</p>
+    <p>Category: {{_item.category | titlecase}}</p>
+    <p>Priority: {{_item.priority}}</p>
+    <p>Note</p>
+    <p>{{_item.note}}</p>
+    <p>Here's a link to the <a href="{{_item.link}}" target="_blank">item</a></p>
 </div>
 
 

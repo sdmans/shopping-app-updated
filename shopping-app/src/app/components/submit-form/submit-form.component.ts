@@ -8,7 +8,7 @@ import { Item } from '../../shared/item';
   styleUrls: ['./submit-form.component.scss']
 })
 export class SubmitFormComponent implements OnInit {
-  private _item: Item;
+  _item: Item;
   item: Item = {
     name: 'eggs',
     link: 'https://shop.safeway.com/product-details.138350308.html',
@@ -26,7 +26,9 @@ export class SubmitFormComponent implements OnInit {
     "supplies"
   ];
 
-  constructor() { }
+  constructor() { 
+    this._item = new Item();
+  }
 
   ngOnInit() {
   }
