@@ -28,7 +28,7 @@ export class SubmitFormComponent implements OnInit {
   ];
 
   constructor() { 
-    this._item = new Item();
+    this._item = new Item();//ngModel will give errors without the object being initiated first.
   }
 
   ngOnInit() {
