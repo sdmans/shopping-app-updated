@@ -12,7 +12,7 @@
                 </mat-form-field>
 
                 <mat-form-field class="form-group">
-                        <input class="form-control" name="image" matInput placeholder="Image" required [(ngModel)]="_item.image">
+                        <input class="form-control" name="image" matInput placeholder="Item" required [(ngModel)]="_item.image">
                     </mat-form-field>
 
                 <mat-form-field class="form-group">
@@ -38,7 +38,7 @@
                       </mat-radio-group>
 
         </div>
-        <button type="submit" mat-raised-button>Submit</button>
+        <button type="submit" mat-raised-button (click)="submitItem()">Submit</button>
     </form>
 </div>
 <!-- Displays preview of item with the name, link, image and category properties-->

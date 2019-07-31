@@ -13,6 +13,7 @@ export class SubmitFormComponent implements OnInit {
     name: 'eggs',
     link: 'https://shop.safeway.com/product-details.138350308.html',
     image: 'https://images.unsplash.com/photo-1491524062933-cb0289261700?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80',
+    description: 'A dozen cage free eggs',
     category: 'food'
   }; //Needs a name, link, image and category at a minimum to display properly
 
@@ -33,4 +34,7 @@ export class SubmitFormComponent implements OnInit {
   ngOnInit() {
   }
 
+  submitItem() {
+    console.log(this._item);
+  }
 }
