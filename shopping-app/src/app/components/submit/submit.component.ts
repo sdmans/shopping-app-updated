@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import { Item } from '../../shared/item';
 import { Observable } from 'rxjs';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
   selector: 'app-submit',
@@ -19,13 +20,13 @@ export class SubmitComponent implements OnInit {
     category: 'food'
   };;
 
-  constructor() {
+  constructor(private db: DatabaseService) {
   }
 
   ngOnInit() {
-    this.items$.push(this.item);
-    this.items$.push(this.item);
-    console.log(this.item);
+    // this.items$.push(this.item);
+    // this.items$.push(this.item);
+    // console.log(this.item);
   }
 
 }

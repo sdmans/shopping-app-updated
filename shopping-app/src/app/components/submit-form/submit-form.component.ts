@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from './../../services/database.service';
 
 import { Item } from '../../shared/item';
 
@@ -27,7 +28,7 @@ export class SubmitFormComponent implements OnInit {
     "supplies"
   ];
 
-  constructor() { 
+  constructor(private db: DatabaseService) { 
     this._item = new Item();//ngModel will give errors without the object being initiated first.
   }
 
@@ -36,5 +37,6 @@ export class SubmitFormComponent implements OnInit {
 
   submitItem() {
     console.log(this._item);
+    this.db.addItem(this._item);
   }
 }
