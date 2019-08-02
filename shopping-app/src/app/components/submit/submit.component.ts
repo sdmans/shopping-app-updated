@@ -24,9 +24,7 @@ export class SubmitComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.items$.push(this.item);
-    // this.items$.push(this.item);
-    // console.log(this.item);
+    this.items$ = this.db.retrieveItems();
   }
 
 }

@@ -1,20 +1,6 @@
 $tile-bg-color: #c1e1ec;
 $tile-hover-color: #5b8fa0;
 
-/* CSS for the material form. May become a separate component soon */
-.example-container {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .example-container > * {
-    width: 100%;
-  }
-
-  .mat-radio-button ~ .mat-radio-button {
-    margin-left: 16px;
-  }
-
 /* CSS for the list tile view */
 mat-grid-tile {
     background: $tile-bg-color;
@@ -28,12 +14,11 @@ mat-grid-tile:hover {
     font-size: 20px;
 }
 
-div.img-container {
-    display: block;
-    height: 80%;
-    width: 80%;
-    border: 1px solid #ffffff;
+img {
+  width: 80%;
+  height: 90%;
 }
+
 div.feature-container {
     display: flex;
     flex-direction: column;

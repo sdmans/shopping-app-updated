@@ -38,4 +38,8 @@ export class DatabaseService {
     this.items$.push(item);
     console.log(this.items$);
   }
+
+  retrieveItems () {
+    return this.items$;
+  }
 }
