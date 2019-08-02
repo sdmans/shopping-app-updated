@@ -27,4 +27,9 @@ export class SubmitComponent implements OnInit {
     this.items$ = this.db.retrieveItems();
   }
 
+  displayItem(itemData) {
+    /* Display data with details at the top of the screen. May also be a drop down box */
+    console.log(itemData);
+  }
+
 }
