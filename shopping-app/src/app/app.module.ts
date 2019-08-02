@@ -34,6 +34,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
+import { ListComponent } from './components/list/list.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { MatRadioModule } from '@angular/material/radio';
     SubmitComponent,
     ProfileComponent,
     NavComponent,
-    SubmitFormComponent
+    SubmitFormComponent,
+    ListComponent
   ],
   imports: [
     BrowserModule,

@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'main', component: MainComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'submit', component: LoginComponent },
+  { path: 'submit', component: SubmitComponent },
   { path: 'account', component: AccountComponent },
   { path: 'profile', component: LoginComponent },
   { path: '',
