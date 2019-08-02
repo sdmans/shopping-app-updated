@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormBuilder, FormGroup} from '@angular/forms';
+// import {FormBuilder, FormGroup} from '@angular/forms';
 import { Item } from '../../shared/item';
 import { Observable } from 'rxjs';
 import { DatabaseService } from '../../services/database.service';
@@ -10,8 +10,7 @@ import { DatabaseService } from '../../services/database.service';
   styleUrls: ['./submit.component.scss']
 })
 export class SubmitComponent implements OnInit {
-  items$: Item[] = [];
-  options: FormGroup;
+  // options: FormGroup;
   item: Item = {
     name: 'eggs',
     link: 'https://shop.safeway.com/product-details.138350308.html',
@@ -20,16 +19,10 @@ export class SubmitComponent implements OnInit {
     category: 'food'
   };;
 
-  constructor(private db: DatabaseService) {
+  constructor() {
   }
 
   ngOnInit() {
-    this.items$ = this.db.retrieveItems();
-  }
-
-  displayItem(itemData) {
-    /* Display data with details at the top of the screen. May also be a drop down box */
-    console.log(itemData);
   }
 
 }

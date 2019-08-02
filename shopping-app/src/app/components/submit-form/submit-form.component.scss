@@ -18,9 +18,11 @@
 /* Styles for item preview */
 .item-preview-container {
   border: 1px solid pink;
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 .preview-img {
-  height: 200px;
-  width: 200px;
+  max-height: 400px;
+  max-width: 80%;
 }
