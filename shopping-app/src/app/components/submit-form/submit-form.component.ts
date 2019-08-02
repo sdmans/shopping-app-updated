@@ -24,6 +24,7 @@ export class SubmitFormComponent implements OnInit {
     "cleaning",
     "hygiene",
     "toiletries",
+    "cosmetics",
     "cooking",
     "supplies"
   ];
