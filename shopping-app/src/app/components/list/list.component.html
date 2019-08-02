@@ -3,9 +3,9 @@
 <mat-grid-list cols="2" rowHeight="2:1">
         <mat-grid-tile *ngFor="let item of items$" (click)="displayItem(item)">
             <img src="{{item.image}}" alt="{{item.name}}">
-            <!-- <div class="feature-container">
-                <i class="material-icons tile-icon">delete</i>
+            <div class="feature-container">
+                <i class="material-icons tile-icon" (click)="removeItem(item)">delete</i>
                 <i class="material-icons">edit</i>
-            </div> -->
+            </div>
         </mat-grid-tile>
 </mat-grid-list>

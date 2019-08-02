@@ -22,4 +22,8 @@ items$: Item[] = [];
     console.log(itemData);
   }
 
+  removeItem(item) {
+    console.log('Removing item...', item);
+  }
+
 }
