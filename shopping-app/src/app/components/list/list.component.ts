@@ -22,8 +22,10 @@ items$: Item[] = [];
     console.log(itemData);
   }
 
-  removeItem(item) {
-    console.log('Removing item...', item);
+  removeItem(event: Event, id) {
+    /* Right now this just deletes the item based on the ID */
+    event.stopPropagation(); //Setting the event to type Event lets you see the stopPropogation available for the method. See example here: https://www.radzen.com/blog/angular-event-bubbling/
+    console.log('Removing item...', id);
   }
 
 }

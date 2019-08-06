@@ -12,7 +12,8 @@ export class DatabaseService {
     image: 'https://images.unsplash.com/photo-1491524062933-cb0289261700?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2251&q=80',
     description: 'A dozen eggs for scramblin',
     note: 'Get the cage free kind!',
-    category: 'food'
+    category: 'food',
+    id: 'abc'
     },
     {
     name: 'Pasta',
@@ -20,7 +21,8 @@ export class DatabaseService {
     image: 'https://images.unsplash.com/photo-1551462147-37885acc36f1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80',
     description: 'Whole grain penne pasta',
     note: 'Make sure to get whole grain, it should be in a darker brown color!',
-    category: 'food'
+    category: 'food',
+    id: 'def'
     },
     {
       name: 'Shampoo',
@@ -28,7 +30,9 @@ export class DatabaseService {
       image: 'https://azcdn.hubble.pgsitecore.com/en-us/-/media/HeadandShoulders/Images/Products/2018/bali_ii/1600/00037000733393_00037000733393_C1N1_NA_1.jpg?w=460&v=1-201901041204',
       description: 'Head and Shoulders Shampoo',
       note: "Get the silky shampoo kind, if they don't have it, you can get the mint kind!",
-      category: ''
+      category: 'Hygiene',
+      id: 'ghi'
+
     }
 ];
 

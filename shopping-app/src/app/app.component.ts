@@ -19,10 +19,10 @@ export class AppComponent {
   $comments: Observable<Comment[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.$comments = this.afs.collection<Comment>('comments').valueChanges();
+    // this.$comments = this.afs.collection<Comment>('comments').valueChanges();
   }
 
   ngOnInit() {
-    this.$comments.subscribe(data => console.log(data));
+    // this.$comments.subscribe(data => console.log(data));
   }
 }

@@ -4,8 +4,8 @@
         <mat-grid-tile *ngFor="let item of items$" (click)="displayItem(item)">
             <img src="{{item.image}}" alt="{{item.name}}">
             <div class="feature-container">
-                <i class="material-icons tile-icon" (click)="removeItem(item)">delete</i>
-                <i class="material-icons">edit</i>
+                <i class="material-icons tile-icon" (click)="removeItem($event, item.id)">delete</i>
+                <i class="material-icons tile-icon">edit</i>
             </div>
         </mat-grid-tile>
 </mat-grid-list>

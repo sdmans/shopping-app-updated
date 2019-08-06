@@ -38,6 +38,7 @@ export class SubmitFormComponent implements OnInit {
 
   submitItem() {
     console.log(this._item);
+    this.item.id = 'jkl';
     this.db.addItem(this._item);
   }
 }
