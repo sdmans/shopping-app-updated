@@ -46,4 +46,8 @@ export class DatabaseService {
   retrieveItems () {
     return this.items$;
   }
+
+  displaySelectedItem(item: Item) {
+    console.log(item);
+  }
 }

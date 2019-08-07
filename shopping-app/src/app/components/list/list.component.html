@@ -5,7 +5,7 @@
             <img src="{{item.image}}" alt="{{item.name}}">
             <div class="feature-container">
                 <i class="material-icons tile-icon" (click)="removeItem($event, item.id)">delete</i>
-                <i class="material-icons tile-icon">edit</i>
+                <i class="material-icons tile-icon" (click)="editItem($event, item.id)">edit</i>
             </div>
         </mat-grid-tile>
 </mat-grid-list>
