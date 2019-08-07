@@ -1,25 +1,53 @@
 $tile-bg-color: #c1e1ec;
 $tile-hover-color: #5b8fa0;
+$curved-border: 10px;
+
+/*Variables for media queries */
+$before-mobile-width: 792px;
+$mobile-width: 412px;
 
 /* CSS for the list tile view */
-mat-grid-tile {
+.mat-grid-tile {
     background: $tile-bg-color;
+    // max-height: 300px;
+    // max-width: 600px;
 }
 
 mat-grid-tile:hover {
     background: $tile-hover-color;
 }
 
-.tile-icon {
-    font-size: 20px;
+i.tile-icon {
+    font-size: 50px;
+    cursor: pointer;
+    @media (max-width: $before-mobile-width) {
+        font-size: 34px;
+    }
+
+    @media(max-width: $mobile-width) {
+        font-size: 24px;
+    }
+}
+
+i.tile-icon:nth-child(2n) {
+    margin-top: 50px;
+    @media(max-width: $before-mobile-width) {
+        margin-top: 35px;
+    }
+    @media(max-width: $mobile-width) {
+        margin-top: 10px;
+    }
 }
 
 img {
-  width: 80%;
-  height: 90%;
+    width: 80%;
+    height: 90%;
+    border-radius: $curved-border;
 }
 
 div.feature-container {
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
+    margin-left: 4px;
 }
