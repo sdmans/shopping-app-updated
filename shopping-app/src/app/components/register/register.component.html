@@ -1,22 +1,25 @@
 <h2>Registration</h2>
 <div class="form-container">
-    <div class="register-input-container">
-        <mat-form-field>
-            <input matInput placeholder="Username">
-        </mat-form-field>
+    <form>
+        <div class="register-input-container">
+            <mat-form-field>
+                <input #userName matInput placeholder="Username">
+            </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Email">
-        </mat-form-field>
+            <mat-form-field>
+                <input #email matInput placeholder="Email">
+            </mat-form-field>
 
-        <mat-form-field>
-            <input matInput placeholder="Password">
-        </mat-form-field>
-        <mat-form-field>
-            <input matInput placeholder="Re-enter Password">
-        </mat-form-field>
-    </div>
-    <button mat-button>Register</button>
+            <mat-form-field>
+                <input #password matInput placeholder="Password">
+            </mat-form-field>
+            <mat-form-field>
+                <input #verifyPassword matInput placeholder="Re-enter Password">
+            </mat-form-field>
+        </div>
+        <button mat-button (click)="register(userName, email, password, verifyPassword)">Register</button>
+    </form>
 </div>
+
 
 <p>Already have an account?</p>
