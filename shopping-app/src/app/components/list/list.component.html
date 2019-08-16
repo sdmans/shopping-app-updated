@@ -1,10 +1,10 @@
 <h3>Item List</h3>
 <!-- List items determine the number of tiles-->
 <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile *ngFor="let item of items$" (click)="displayItem(item)">
+        <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">
             <img src="{{item.image}}" alt="{{item.name}}">
             <div class="feature-container">
-                <i class="material-icons tile-icon" (click)="removeItem($event, item.id)">delete</i>
+                <i class="material-icons tile-icon" (click)="removeItem($event, item.id, i)">delete</i>
                 <i class="material-icons tile-icon" (click)="editItem($event, item.id)">edit</i>
             </div>
         </mat-grid-tile>
