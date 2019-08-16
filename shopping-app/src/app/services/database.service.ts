@@ -36,6 +36,8 @@ export class DatabaseService {
     }
 ];
 
+selectedItem$: Item;
+
   constructor() { }
 
   addItem(item): void {
@@ -48,6 +50,8 @@ export class DatabaseService {
   }
 
   displaySelectedItem(item: Item) {
-    console.log(item);
+    this.selectedItem$ = item;
+    console.log(this.selectedItem$);
+    return this.selectedItem$;
   }
 }
