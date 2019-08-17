@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../../services/database.service';
+import { Output, EventEmitter } from '@angular/core'; //For component interaction
 import { Item } from './../../shared/item';
+
 
 @Component({
   selector: 'app-list',
@@ -9,6 +11,7 @@ import { Item } from './../../shared/item';
 })
 export class ListComponent implements OnInit {
 items$: Item[] = [];
+@Output() selectItem = new EventEmitter<Item>();
 
   constructor(private dbs: DatabaseService) { }
 
@@ -20,7 +23,6 @@ items$: Item[] = [];
   displayItem(itemData) {
     /* Display data with details at the top of the screen. May also be a drop down box */
     this.dbs.displaySelectedItem(itemData);
-
   }
 
   removeItem(event: Event, id, index) {
