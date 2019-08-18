@@ -1,19 +1,23 @@
-<p>Display item with details will go here</p>
-
 <!-- Displays preview of item with the name, link, image and category properties-->
     <!-- Produces placeholder image until non-broken image link is provided. Source: https://stackoverflow.com/questions/36429903/angular-2-check-if-image-url-is-valid-or-broken-->
-
-<div *ngIf="item$" class="item-preview-container">
+<div *ngIf="!item" class="item-preview-container preview-placeholder">
     <h3>Item Preview</h3>
-    <p><b>{{item$.name | titlecase}}</b></p>
-    <img class="preview-img" src="{{item$.image}}" onError="this.src='https://via.placeholder.com/200x200'" alt="item$.name">
-    <div *ngIf="item$.description.length > 0" class="item-info">
-        <p>Description</p>
-        <p>{{item$.description}}</p>
-        <p>Category: {{item$.category | titlecase}}</p>
-        <p>Priority: {{item$.priority}}</p>
-        <p>Note</p>
-        <p>{{item$.note}}</p>
-        <p>Here's a link to the <a href="{{item$.link}}" target="_blank">item</a></p>
+    <p>Select an item to display the details here!</p>
+</div>
+
+<div *ngIf="item" class="item-preview-container">
+    <h3>Item Preview</h3>
+    <p><b>{{item.name | titlecase}}</b></p>
+    <img class="preview-img" src="{{item.image}}" onError="this.src='https://via.placeholder.com/200x200'" alt="item.name">
+    <div *ngIf="item.description.length > 0" class="item-info">
+        <p class="description">Description</p>
+        <p>{{item.description}}</p>
+        <div class="additional-info">
+            <p>Category: {{item.category | titlecase}}</p>
+            <p>Priority: {{item.priority}}</p>
+        </div>
+            <p>Note</p>
+            <p>{{item.note}}</p>
+        <p>Here's a link to the <a href="{{item.link}}" target="_blank">item</a></p>
     </div>
 </div>

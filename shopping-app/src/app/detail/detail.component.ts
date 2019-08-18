@@ -1,5 +1,4 @@
-import { SubmitComponent } from './../components/submit/submit.component';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { DatabaseService } from '../services/database.service';
 import { Item } from '../shared/item';
 import { Observable } from 'rxjs';
@@ -10,13 +9,22 @@ import { Observable } from 'rxjs';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-item$: Item;
+@Input() item: Item = {
+  name: "",
+  link: "#",
+  image: "http://via.placeholder.com/400x200",
+  description: "",
+  category: "",
+  note: ""
+}
   
 
-  constructor(private dbs: DatabaseService) { }
+  constructor(private dbs: DatabaseService) {
+  }
 
   ngOnInit() { 
-    this.item$ = this.dbs.getSelectedItem();
+    console.log(this.item);
+    
   }
 
 }

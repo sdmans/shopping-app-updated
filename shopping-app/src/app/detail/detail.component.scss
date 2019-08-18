@@ -1,6 +1,35 @@
+div.item-preview-container {
+    margin-bottom: 40px;
+}
+
 img.preview-img {
     width: 70%;
     height: auto;
     max-width: 400px;
     max-height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid black;
+}
+
+div.preview-placeholder {
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+p.description {
+    font-weight: bold;
+}
+
+div.additional-info > * {
+    display: inline-block;
+    margin-left: 10px;
 }

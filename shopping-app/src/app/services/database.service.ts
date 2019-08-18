@@ -38,14 +38,7 @@ export class DatabaseService {
     }
 ];
 
-selectedItem$: Item = {
-  name: "",
-  link: "#",
-  image: "http://via.placeholder.com/400x200",
-  description: "",
-  category: "",
-  note: ""
-}
+selectedItem$: Item;
 
   constructor() { }
 

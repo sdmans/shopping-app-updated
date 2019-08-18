@@ -11,7 +11,8 @@ import { Item } from './../../shared/item';
 })
 export class ListComponent implements OnInit {
 items$: Item[] = [];
-@Output() selectItem = new EventEmitter<Item>();
+// @Output() selectItem = new EventEmitter<Item>();
+selectedItem;
 
   constructor(private dbs: DatabaseService) { }
 
@@ -23,6 +24,8 @@ items$: Item[] = [];
   displayItem(itemData) {
     /* Display data with details at the top of the screen. May also be a drop down box */
     this.dbs.setSelectedItem(itemData);
+    this.selectedItem = itemData;
+    // this.selectItem.emit(itemData);
   }
 
   removeItem(event: Event, id, index) {

@@ -1,4 +1,6 @@
 <h3>Item List</h3>
+<app-detail [item]="selectedItem"></app-detail>
+
 <!-- List items determine the number of tiles-->
 <mat-grid-list cols="2" rowHeight="2:1">
         <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">
