@@ -8,7 +8,14 @@ import { Item } from '../shared/item';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-SelectedItem$: Item;
+item$: Item = {
+  name: "",
+  link: "#",
+  image: "http://via.placeholder.com/400x200",
+  description: "",
+  category: "",
+  note: ""
+}
   
 
   constructor(dbs: DatabaseService) { }
