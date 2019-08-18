@@ -22,7 +22,7 @@ items$: Item[] = [];
 
   displayItem(itemData) {
     /* Display data with details at the top of the screen. May also be a drop down box */
-    this.dbs.displaySelectedItem(itemData);
+    this.dbs.setSelectedItem(itemData);
   }
 
   removeItem(event: Event, id, index) {

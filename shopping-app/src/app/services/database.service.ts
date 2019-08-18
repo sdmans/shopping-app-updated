@@ -1,5 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../shared/item';
+import { Observable } from 'rxjs';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -36,7 +38,14 @@ export class DatabaseService {
     }
 ];
 
-selectedItem$: Item;
+selectedItem$: Item = {
+  name: "",
+  link: "#",
+  image: "http://via.placeholder.com/400x200",
+  description: "",
+  category: "",
+  note: ""
+}
 
   constructor() { }
 
@@ -45,13 +54,19 @@ selectedItem$: Item;
     console.log(this.items$);
   }
 
-  retrieveItems () {
+  retrieveItems() {
     return this.items$;
   }
 
-  displaySelectedItem(item: Item) {
+  setSelectedItem(item: Item) {
     this.selectedItem$ = item;
     console.log(this.selectedItem$);
+    return this.selectedItem$;
+  }
+
+  getSelectedItem() {
+    // const selectedItemObservable = of(this.selectedItem$);
+    // return selectedItemObservable;
     return this.selectedItem$;
   }
 }

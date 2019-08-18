@@ -1,6 +1,8 @@
+import { SubmitComponent } from './../components/submit/submit.component';
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../services/database.service';
 import { Item } from '../shared/item';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-detail',
@@ -8,19 +10,13 @@ import { Item } from '../shared/item';
   styleUrls: ['./detail.component.scss']
 })
 export class DetailComponent implements OnInit {
-item$: Item = {
-  name: "",
-  link: "#",
-  image: "http://via.placeholder.com/400x200",
-  description: "",
-  category: "",
-  note: ""
-}
+item$: Item;
   
 
-  constructor(dbs: DatabaseService) { }
+  constructor(private dbs: DatabaseService) { }
 
-  ngOnInit() {
+  ngOnInit() { 
+    this.item$ = this.dbs.getSelectedItem();
   }
 
 }
