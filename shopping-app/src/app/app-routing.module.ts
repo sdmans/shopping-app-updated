@@ -16,7 +16,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'submit', component: SubmitComponent },
   { path: 'account', component: AccountComponent },
-  { path: 'profile', component: LoginComponent },
   { path: '',
   redirectTo: 'main',
   pathMatch: 'full'

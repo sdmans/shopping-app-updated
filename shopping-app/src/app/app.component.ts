@@ -15,7 +15,7 @@ export interface Comment { comment: string, name: string, userId: string, id: st
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'shopping-app';
+  title = 'Shopping Application';
   $comments: Observable<Comment[]>;
 
   constructor(private afs: AngularFirestore) {
