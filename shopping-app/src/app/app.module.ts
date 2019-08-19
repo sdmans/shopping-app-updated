@@ -36,6 +36,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './detail/detail.component';
+import { SetupComponent } from './setup/setup.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import { DetailComponent } from './detail/detail.component';
     NavComponent,
     SubmitFormComponent,
     ListComponent,
-    DetailComponent
+    DetailComponent,
+    SetupComponent
   ],
   imports: [
     BrowserModule,
