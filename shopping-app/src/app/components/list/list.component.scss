@@ -7,6 +7,19 @@ $before-mobile-width: 792px;
 $mobile-width: 412px;
 
 /* CSS for the list tile view */
+div.list-container {
+    padding-left: 15%;
+    padding-right: 15%;
+    @media (max-width: $before-mobile-width) {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    @media (min-width: $before-mobile-width + 1) and (max-width: 992px) {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+}
+
 .mat-grid-tile {
     background: $tile-bg-color;
     // max-height: 300px;
