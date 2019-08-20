@@ -25,22 +25,24 @@
 
 <h4>Locations List</h4>
 <ul>
-    <li *ngFor="let place of places">
-        <p>{{place.address}}</p>
+    <li *ngFor="let locale of locations">
+        <p>{{locale.name}}<br>Address: {{locale.address}}</p>
     </li>
 </ul>
 
-<h4>Add a Location</h4>
-
-<h4>Add a place!</h4>
-<p>Place Address: {{placeAddress}}</p>
-<p>Place Link: <a href="http://{{placeLink}}" target="_blank">{{placeLink}}</a></p>
-<div class="place-input-container">
+<h4>Add a location</h4>
+<p>Location Name: {{locationName}}</p>
+<p>Location Address: {{locationAddress}}</p>
+<p>Location Link: <a href="http://{{locationLink}}" target="_blank">{{locationLink}}</a></p>
+<div class="location-input-container">
     <mat-form-field class="example-full-width">
-        <input [(ngModel)]="placeAddress" matInput value="{{placeAddress}}" placeholder="Store Name" (keyup.enter)="addPlace()">
+        <input [(ngModel)]="locationName" matInput value="{{locationName}}" placeholder="Store Name" (keyup.enter)="addLocation()">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-        <input [(ngModel)]="placeLink" matInput value="{{placeLink}}" placeholder="Store link" (keyup.enter)="addPlace()">
+        <input [(ngModel)]="locationAddress" matInput value="{{locationAddress}}" placeholder="Store Address" (keyup.enter)="addLocation()">
     </mat-form-field>
-    <button (click)="addPlace()">Add Place</button>
+    <mat-form-field class="example-full-width">
+        <input [(ngModel)]="locationLink" matInput value="{{locationLink}}" placeholder="Store link" (keyup.enter)="addLocation()">
+    </mat-form-field>
+    <button (click)="addLocation()">Add Location</button>
 </div>

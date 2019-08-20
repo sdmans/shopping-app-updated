@@ -8,8 +8,9 @@ import { Roommate } from '../../shared/roommate';
 })
 export class AccountComponent implements OnInit {
 roommateName = "";
-placeAddress = "";
-placeLink = "";
+locationName = "";
+locationAddress = "";
+locationLink = "";
 
 roommates: Roommate[] = [
   {
@@ -29,16 +30,19 @@ roommates: Roommate[] = [
   } 
 ];
 
-places = [
+locations = [
   {
+    name: "Safeway",
     address: "123 Fake Street, New York",
     website: "#",
   },
   {
+    name: "Stop & Shop",
     address: "345 Madeup Avenue, Milwaukee",
     website: "#",
   },
   {
+    name: "Wegmans",
     address: "678 OutofIdeas Way, Kansas",
     website: "#",
   },
@@ -62,14 +66,16 @@ places = [
     }
   }
 
-  addPlace(): void {
-    const newPlace = {
-      address: this.placeAddress,
-      website: this.placeLink
+  addLocation(): void {
+    const newLocale = {
+      name: this.locationName,
+      address: this.locationAddress,
+      website: this.locationLink
     }
-    this.places.push(newPlace);
-    this.placeAddress = "";
-    this.placeLink = "";
+    this.locations.push(newLocale);
+    this.locationName = "";
+    this.locationAddress = "";
+    this.locationLink = "";
   }
 
 }
