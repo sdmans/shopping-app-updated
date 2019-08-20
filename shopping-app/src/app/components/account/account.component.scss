@@ -2,3 +2,14 @@ ul {
     list-style-type: none;
     padding-left: 0px;
 }
+
+div.place-input-container {
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+}
+
+div.place-input-container > * {
+    display: block;
+    
+}

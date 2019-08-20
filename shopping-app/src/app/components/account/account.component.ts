@@ -67,7 +67,9 @@ places = [
       address: this.placeAddress,
       website: this.placeLink
     }
-    console.log(newPlace);
+    this.places.push(newPlace);
+    this.placeAddress = "";
+    this.placeLink = "";
   }
 
 }
