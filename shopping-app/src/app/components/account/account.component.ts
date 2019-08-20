@@ -8,6 +8,8 @@ import { Roommate } from '../../shared/roommate';
 })
 export class AccountComponent implements OnInit {
 roommateName = "";
+placeAddress = "";
+placeLink = "";
 
 roommates: Roommate[] = [
   {
@@ -27,8 +29,19 @@ roommates: Roommate[] = [
   } 
 ];
 
-locations = [
-
+places = [
+  {
+    address: "123 Fake Street, New York",
+    website: "#",
+  },
+  {
+    address: "345 Madeup Avenue, Milwaukee",
+    website: "#",
+  },
+  {
+    address: "678 OutofIdeas Way, Kansas",
+    website: "#",
+  },
 ];
 
   constructor() { }
@@ -47,7 +60,14 @@ locations = [
     } else {
       console.log("Name does not meet minimum requirements!");
     }
-    
+  }
+
+  addPlace(): void {
+    const newPlace = {
+      address: this.placeAddress,
+      website: this.placeLink
+    }
+    console.log(newPlace);
   }
 
 }
