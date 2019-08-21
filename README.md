@@ -32,7 +32,7 @@ Favorites list
 Recipes
 
 *Concepts and Designs*\
-**View List**\
+##Pages##
 **Main Page**\
 Should include a description of the app and an item list view. 
 May also include recently posted and high priority items.
@@ -49,7 +49,6 @@ This should include a way for users to add roommates with a form.
 Should allow you to add favorite store locations with addresses.
 Maybe give intial information about the roommate.
 
-
 **Login View**\
 A log in page for users to sign in when they already have credentials.
 Should allow you to login via gmail and Facebook accounts as well.
@@ -60,6 +59,16 @@ Includes fields for any data that the user is required to submit for their item.
 **Profile View**\
 This should allow to view current roommates, recently purchased items and recipes.
 
+## Components ##
+**Navigation Component**
+
+**List Component**
+
+**Detail Component**
+
+
+
+## Plan and Technology Outline ##
 Here's what I'm planning to use!
 
 * Angular | Framework
@@ -82,8 +91,8 @@ Here's what I'm planning to use!
 * [x] Create list view using Angular Material
 * [x] Create method to add and remove items to list with test data
 * [x] Create initial account management view including roommates list and store locations
-* [] Create initial profile view and include a test recent recipes item that automatically adds items to a list
-* [] Create a way for users to view a previous list in the profile view that lets them add it to the list view
+* [ ] Create initial profile view and include a test recent recipes item that automatically adds items to a list
+* [ ] Create a way for users to view a previous list in the profile view that lets them add it to the list view
 
 
 Minimum Viable Product
