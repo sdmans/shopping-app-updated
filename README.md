@@ -16,7 +16,7 @@ Users can create a custom recipe that automatically adds all items to the list \
 Create way for users to add and adjust prices for these items and store those values \
 Create a recipe history list for users to refer to, rather than having them re-add items \
 
-*Item Model* - What should each item object look like?
+**Item Model - What should each item object look like?**
 
 Item Name: String\
 Description: String\
@@ -32,7 +32,7 @@ Favorites list
 Recipes
 
 *Concepts and Designs*\
-##Pages##
+## Pages
 **Main Page**\
 Should include a description of the app and an item list view. 
 May also include recently posted and high priority items.
@@ -59,7 +59,7 @@ Includes fields for any data that the user is required to submit for their item.
 **Profile View**\
 This should allow to view current roommates, recently purchased items and recipes.
 
-## Components ##
+## Components
 **Navigation Component**
 
 **List Component**
@@ -68,7 +68,7 @@ This should allow to view current roommates, recently purchased items and recipe
 
 
 
-## Plan and Technology Outline ##
+## Project plan and Technology Outline
 Here's what I'm planning to use!
 
 * Angular | Framework
@@ -95,7 +95,7 @@ Here's what I'm planning to use!
 * [ ] Create a way for users to view a previous list in the profile view that lets them add it to the list view
 
 
-Minimum Viable Product
+**Minimum Viable Product**/
 At a minimum, the app should do the following:
 * Create an account and login
 * Allow users to create a list of items they need from the store with a form
