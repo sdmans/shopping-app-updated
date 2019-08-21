@@ -23,7 +23,7 @@ Description: String\
 Link?: String\
 Notes?: String\
 LastOrdered?: String\
-orderedBy: String\
+orderedBy: String
 
 *User Model* - The type of information a User's account will have.
 List of roommates
@@ -33,31 +33,31 @@ Recipes
 
 *Concepts and Designs*\
 **View List**\
-Main Page\
+**Main Page**\
 Should include a description of the app and an item list view. 
 May also include recently posted and high priority items.
 View should vary based on whether a user is signed in or not.
 Will include navigation options for creating a list, creating recipes and account management.
 Signed out view could include instructions.
 
-Registration Page\
+**Registration Page**\
 A registration form where users can create an account to use the application.
 This should include account creation via gmail and Facebook.
 
-Account Management Page\
+**Account Management Page**\
 This should include a way for users to add roommates with a form.
 Should allow you to add favorite store locations with addresses.
 Maybe give intial information about the roommate.
 
 
-Login View\
+**Login View**\
 A log in page for users to sign in when they already have credentials.
 Should allow you to login via gmail and Facebook accounts as well.
 
-Item Submission Form\
+**Item Submission Form**\
 Includes fields for any data that the user is required to submit for their item.
 
-Profile View\
+**Profile View**\
 This should allow to view current roommates, recently purchased items and recipes.
 
 Here's what I'm planning to use!
@@ -70,19 +70,20 @@ Here's what I'm planning to use!
 * Angular Material | Design Framework
 * Figma, Gravit Designer, or hand drawn | Initial UI designs
 
-Phase 1: Initial Setup for Project Start
+**Phase 1: Initial Setup for Project Start**
 * [x] Finish ReadMe file with initial details about the project
 * [x] Create MVP section of readme for project. What do you need to get the functionality for the project working and what can wait?
 * [x] Unable to locate API, will be using manual data.
 * [x] Create basic angular project connected to Firebase
 * [x] Add Angular Material to project
 
-Phase 2: Create pages for initial project and test features
-[x] Create the components listed above, including the main, list, account, profile, log in, and register components
-[x] Create list view using Angular Material
-[x] Create method to add and remove items to list with test data
-[x] Create initial profile view including roommates list and store locations.
-[]  
+**Phase 2: Create pages for initial project and test features**
+* [x] Create the components listed above, including the main, list, account, profile, log in, and register components
+* [x] Create list view using Angular Material
+* [x] Create method to add and remove items to list with test data
+* [x] Create initial account management view including roommates list and store locations
+* [] Create initial profile view and include a test recent recipes item that automatically adds items to a list
+* [] Create a way for users to view a previous list in the profile view that lets them add it to the list view
 
 
 Minimum Viable Product
