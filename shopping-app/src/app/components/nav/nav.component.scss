@@ -1,4 +1,5 @@
 $side-nav-break: 600px;
+$header-nav-large: 1300px;
 $toolbar-nav-item-color: #ffffff;
 
 .sidenav-container {
@@ -32,8 +33,21 @@ $toolbar-nav-item-color: #ffffff;
   }
 }
 
-@media(max-width: $side-nav-break) {
-.md-nav-item {
-  display: none;
+  @media(max-width: $side-nav-break) {
+    .md-nav-item {
+      display: none;
+    }
 }
+
+.mat-toolbar{
+  span {
+      @media (max-width: 1052px) and (min-width: $side-nav-break + 1) {
+        margin-right: 5px;
+      }
+      @media(max-width: $header-nav-large) and (min-width: $side-nav-break + 1) {
+        a {
+          font-size: 16px;
+        }
+    }
+  }
 }

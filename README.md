@@ -6,7 +6,7 @@ Currently implementing basic concepts for project and testing different approach
 **Goals**
 To create an app that lets roommates create a shared list of items they need for coordination and convenience!
 
-**Features** \
+**Features**
 - Create a list of items for a shopping list that users can modify
 - Create an account system for users to edit their "Household"
 - Users can add the prices manually
