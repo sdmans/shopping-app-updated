@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../shared/item';
+import { Roommate } from '../shared/roommate';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 
@@ -38,6 +39,42 @@ export class DatabaseService {
     }
 ];
 
+roommates: Roommate[] = [
+  {
+    name: "Sam",
+    value: 1
+  },
+  {
+    name: "Rey",
+    value: 2
+  },
+  {
+    name: "Matt",
+    value: 3
+  }, {
+    name: "Zack",
+    value: 4
+  } 
+];
+
+locations = [
+  {
+    name: "Safeway",
+    address: "123 Fake Street, New York",
+    website: "#",
+  },
+  {
+    name: "Stop & Shop",
+    address: "345 Madeup Avenue, Milwaukee",
+    website: "#",
+  },
+  {
+    name: "Wegmans",
+    address: "678 OutofIdeas Way, Kansas",
+    website: "#",
+  },
+];
+
 selectedItem$: Item;
 
   constructor() { }
@@ -49,6 +86,14 @@ selectedItem$: Item;
 
   retrieveItems() {
     return this.items$;
+  }
+
+  getRoommates() {
+    return this.roommates;
+  }
+
+  getLocations() {
+    return this.locations;
   }
 
   setSelectedItem(item: Item) {

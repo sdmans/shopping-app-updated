@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Roommate } from '../../shared/roommate';
+import { DatabaseService } from '../../services/database.service';
 
 @Component({
   selector: 'app-account',
@@ -48,7 +49,7 @@ locations = [
   },
 ];
 
-  constructor() { }
+  constructor(dbs: DatabaseService) { }
 
   ngOnInit() {
   }

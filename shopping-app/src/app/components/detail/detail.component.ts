@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { DatabaseService } from '../services/database.service';
-import { Item } from '../shared/item';
+import { DatabaseService } from '../../services/database.service';
+import { Item } from '../../shared/item';
 import { Observable } from 'rxjs';
 
 @Component({

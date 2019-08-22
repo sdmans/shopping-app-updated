@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DatabaseService } from '../../services/database.service';
+import { Roommate } from '../../shared/roommate';
 
 @Component({
   selector: 'app-profile',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProfileComponent implements OnInit {
 
-  constructor() { }
+  roommates: Roommate[] = [];
+  locations = [];
+
+  constructor(private dbs: DatabaseService) { }
 
   ngOnInit() {
+    console.log(this.dbs.getLocations());
+    console.log(this.dbs.getRoommates());
   }
 
 }

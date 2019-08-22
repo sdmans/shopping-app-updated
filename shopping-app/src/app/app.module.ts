@@ -35,8 +35,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { ListComponent } from './components/list/list.component';
-import { DetailComponent } from './detail/detail.component';
-import { SetupComponent } from './setup/setup.component';
+import { DetailComponent } from './components/detail/detail.component';
+import { SetupComponent } from './components/setup/setup.component';
 
 
 @NgModule({
