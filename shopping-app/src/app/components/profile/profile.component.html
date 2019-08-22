@@ -4,16 +4,17 @@
 
 <p><b>Roommates</b></p>
 <ul>
-    <li>Roommate 1</li>
-    <li>Roommate 2</li>
-    <li>Roommate 3</li>
+    <li *ngFor="let mate of roommates">
+        <p>{{mate.name}}</p>
+    </li>
 </ul>
 
 <p><b>Locations</b></p>
 <ul>
-    <li>Location 1</li>
-    <li>Location 2</li>
-    <li>Location 3</li>
+  <li *ngFor="let locale of locations">
+      <p><b>{{locale.name}}</b></p>
+     <p>{{locale.address}}</p>
+  </li>
 </ul>
 
 <a routerLink="/account">Edit roommates and locations</a>

@@ -9,14 +9,15 @@ import { Roommate } from '../../shared/roommate';
 })
 export class ProfileComponent implements OnInit {
 
-  roommates: Roommate[] = [];
+  roommates: Roommate[];
   locations = [];
 
   constructor(private dbs: DatabaseService) { }
 
   ngOnInit() {
-    console.log(this.dbs.getLocations());
-    console.log(this.dbs.getRoommates());
+    /* Retrieves roommates from database service which will eventually be available as an observable on a database */
+    this.roommates = this.dbs.getRoommates();
+    this.locations = this.dbs.getLocations();
   }
 
 }
