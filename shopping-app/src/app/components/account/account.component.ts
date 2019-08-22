@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Roommate } from '../../shared/roommate';
+import { Location } from '../../shared/location';
 import { DatabaseService } from '../../services/database.service';
 
 @Component({
@@ -31,7 +32,7 @@ roommates: Roommate[] = [
   } 
 ];
 
-locations = [
+locations: Location[] = [
   {
     name: "Safeway",
     address: "123 Fake Street, New York",
