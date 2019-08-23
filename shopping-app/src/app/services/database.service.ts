@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Item } from '../shared/item';
 import { Roommate } from '../shared/roommate';
+import { Location } from '../shared/location';
 import { Observable } from 'rxjs';
 import { of } from 'rxjs';
 
@@ -100,8 +101,8 @@ selectedItem$: Item;
     this.roommates.push(newRoommate);
   }
 
-  addLocation() {
-    
+  addLocation(newLocale: Location) {
+    this.locations.push(newLocale);
   }
 
   setSelectedItem(item: Item) {

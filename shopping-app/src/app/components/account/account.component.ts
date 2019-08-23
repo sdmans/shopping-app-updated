@@ -80,7 +80,7 @@ locations$: Location[];
       address: this.locationAddress,
       website: this.locationLink
     }
-    this.locations$.push(newLocale);
+    this.dbs.addLocation(newLocale);
     this.locationName = "";
     this.locationAddress = "";
     this.locationLink = "";
