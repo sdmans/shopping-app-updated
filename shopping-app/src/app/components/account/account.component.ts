@@ -75,15 +75,21 @@ locations$: Location[];
   }
 
   addLocation(): void {
-    const newLocale = {
-      name: this.locationName,
-      address: this.locationAddress,
-      website: this.locationLink
+
+    if(this.locationName.length > 0 && this.locationAddress.length > 0) {
+      const newLocale = {
+        name: this.locationName,
+        address: this.locationAddress,
+        website: this.locationLink
+      }
+      this.dbs.addLocation(newLocale);
+      this.locationName = "";
+      this.locationAddress = "";
+      this.locationLink = "";
     }
-    this.dbs.addLocation(newLocale);
-    this.locationName = "";
-    this.locationAddress = "";
-    this.locationLink = "";
-  }
+    else {
+      console.log("Make sure you've added a name and location for the new store!");
+    }
+  } 
 
 }
