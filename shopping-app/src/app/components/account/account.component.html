@@ -11,7 +11,7 @@
   </mat-select>
 </mat-form-field> -->
 <ul>
-    <li *ngFor="let mate of roommates">
+    <li *ngFor="let mate of roommates$">
         <p>{{mate.name}}</p>
     </li>
 </ul>
@@ -25,7 +25,7 @@
 
 <h4>Locations List</h4>
 <ul>
-    <li *ngFor="let locale of locations">
+    <li *ngFor="let locale of locations$">
         <p>{{locale.name}}<br>Address: {{locale.address}}</p>
     </li>
 </ul>
