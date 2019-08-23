@@ -67,7 +67,7 @@ locations$: Location[];
       value: (this.roommates$.length + 1)
     }
     if (this.roommateName.length > 0) {
-      this.roommates$.push(newRoommate);
+      this.dbs.addRoommate(newRoommate);
       this.roommateName = "";
     } else {
       console.log("Name does not meet minimum requirements!");

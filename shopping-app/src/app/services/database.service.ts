@@ -96,6 +96,14 @@ selectedItem$: Item;
     return this.locations;
   }
 
+  addRoommate(newRoommate: Roommate) {
+    this.roommates.push(newRoommate);
+  }
+
+  addLocation() {
+    
+  }
+
   setSelectedItem(item: Item) {
     this.selectedItem$ = item;
     console.log(this.selectedItem$);
