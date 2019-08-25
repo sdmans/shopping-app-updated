@@ -37,6 +37,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { SetupComponent } from './components/setup/setup.component';
+import { ItemDetailComponent } from './components/item-detail/item-detail.component';
 
 
 @NgModule({
@@ -52,7 +53,8 @@ import { SetupComponent } from './components/setup/setup.component';
     SubmitFormComponent,
     ListComponent,
     DetailComponent,
-    SetupComponent
+    SetupComponent,
+    ItemDetailComponent
   ],
   imports: [
     BrowserModule,

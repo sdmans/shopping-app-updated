@@ -77,6 +77,7 @@ locations = [
 ];
 
 selectedItem$: Item;
+itemId: string;
 
   constructor() { }
 

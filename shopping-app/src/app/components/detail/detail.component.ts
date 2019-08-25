@@ -27,20 +27,6 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit() { 
-    if (this.item === undefined) {
-      // this.route.paramMap.subscribe(params => {
-      //   console.log(params["params"].id);
-      //   let itemId = params["params"].id;
-      //   console.log(this.dbs.getItemById(itemId));
-      //   this.item = this.dbs.getItemById(itemId);
-      // });
-      this.getItem();
-    }
-  }
-
-  getItem() {
-    const id = this.route.snapshot.paramMap.get('id');
-    console.log(id);
   }
 
 }
