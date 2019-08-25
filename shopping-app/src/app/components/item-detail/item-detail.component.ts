@@ -33,4 +33,8 @@ export class ItemDetailComponent implements OnInit {
     this.item = this.dbs.getItemById(id);
   }
 
+  goBack(): void {
+    this.location.back();
+  }
+
 }
