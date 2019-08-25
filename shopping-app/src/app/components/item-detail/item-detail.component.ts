@@ -25,13 +25,8 @@ export class ItemDetailComponent implements OnInit {
 
   ngOnInit() {
     console.log(this.item);
+    /* Checks if the item detail is set to the default value, then retrieves the item */
     if (this.item.name === "") {
-      // this.route.paramMap.subscribe(params => {
-      //   console.log(params["params"].id);
-      //   let itemId = params["params"].id;
-      //   console.log(this.dbs.getItemById(itemId));
-      //   this.item = this.dbs.getItemById(itemId);
-      // });
       this.getItem();
     }
   }
@@ -39,7 +34,8 @@ export class ItemDetailComponent implements OnInit {
   getItem() {
     const id = this.route.snapshot.paramMap.get('id');
     this.dbs.itemId = id;
-    console.log(id);
+    console.log(this.dbs.getItemById(id));
+
   }
 
 }

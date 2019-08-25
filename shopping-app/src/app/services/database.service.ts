@@ -91,13 +91,13 @@ itemId: string;
   }
 
   getItemById(id: string) {
-    for (let i = 0; i < this.items$.length; i++) {
-      if (this.items$[i].id === id) {
-        return this.items$[i];
-      } else {
-        return;
+    console.log(id);
+    this.items$.map((item) => {
+      if(item.id === id) {
+        console.log(item);
+        return item;
       }
-    }
+    })
   }
 
   getRoommates() {
