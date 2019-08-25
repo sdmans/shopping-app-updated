@@ -24,18 +24,13 @@ export class ItemDetailComponent implements OnInit {
   constructor(private route: ActivatedRoute, private location: Location, private dbs: DatabaseService) { }
 
   ngOnInit() {
-    console.log(this.item);
     /* Checks if the item detail is set to the default value, then retrieves the item */
-    if (this.item.name === "") {
       this.getItem();
-    }
   }
 
   getItem() {
     const id = this.route.snapshot.paramMap.get('id');
-    this.dbs.itemId = id;
-    console.log(this.dbs.getItemById(id));
-
+    this.item = this.dbs.getItemById(id);
   }
 
 }

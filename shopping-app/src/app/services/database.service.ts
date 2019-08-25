@@ -76,8 +76,8 @@ locations = [
   },
 ];
 
-selectedItem$: Item;
-itemId: string;
+selectedItem$: Item;//For detail component on main page
+singleItem: Item;//For item-detail view
 
   constructor() { }
 
@@ -94,10 +94,12 @@ itemId: string;
     console.log(id);
     this.items$.map((item) => {
       if(item.id === id) {
-        console.log(item);
-        return item;
+        
+        this.singleItem = item;
+        console.log("Currently viewing single item:", this.singleItem);
       }
     })
+    return this.singleItem;
   }
 
   getRoommates() {
