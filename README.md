@@ -91,8 +91,9 @@ Here's what I'm planning to use!
 * [x] Create list view using Angular Material
 * [x] Create method to add and remove items to list with test data
 * [x] Create initial account management view including roommates list and store locations
+* [ ] Create a way for users to view full details for an item. May be a separate detail view.
 * [ ] Create initial profile view and include a test recent recipes item that automatically adds items to a list
-* [ ] Create a way for users to view a previous list in the profile view that lets them add it to the list view
+* [ ] Create a way for users to view a previous list in the profile view. Later, you can give users the ability to add older lists to the current list. 
 
 
 **Minimum Viable Product**/
