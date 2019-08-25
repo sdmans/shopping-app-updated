@@ -9,6 +9,7 @@ import { AccountComponent } from './components/account/account.component';
 import { LoginComponent } from './components/login/login.component';
 import { SubmitComponent } from './components/submit/submit.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { DetailComponent } from './components/detail/detail.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'submit', component: SubmitComponent },
   { path: 'account', component: AccountComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'items/:id' , component: DetailComponent },
   { path: '',
   redirectTo: 'main',
   pathMatch: 'full'

@@ -89,6 +89,16 @@ selectedItem$: Item;
     return this.items$;
   }
 
+  getItemById(id: string) {
+    for (let i = 0; i < this.items$.length; i++) {
+      if (this.items$[i].id === id) {
+        return this.items$[i];
+      } else {
+        return;
+      }
+    }
+  }
+
   getRoommates() {
     return this.roommates;
   }
