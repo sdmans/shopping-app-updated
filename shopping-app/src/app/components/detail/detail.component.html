@@ -7,8 +7,10 @@
 
 <div *ngIf="item" class="item-preview-container">
     <h3>Item Preview</h3>
-    <p><b>{{item.name | titlecase}}</b></p>
-    <img class="preview-img" src="{{item.image}}" onError="this.src='https://via.placeholder.com/200x200'" alt="item.name">
+    <h4>{{item.name | titlecase}}</h4>
+    <a routerLink="/items/{{item.id}}">
+        <img class="preview-img grow" src="{{item.image}}" onError="this.src='https://via.placeholder.com/200x200'" alt="item.name">
+    </a>
     <div *ngIf="item.description.length > 0" class="item-info">
         <p class="description">Description</p>
         <p>{{item.description}}</p>

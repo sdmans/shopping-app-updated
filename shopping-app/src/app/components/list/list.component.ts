@@ -18,7 +18,7 @@ selectedItem;
 
   ngOnInit() {
     this.items$ = this.dbs.retrieveItems();
-    console.log(this.items$);
+    // console.log(this.items$);
   }
 
   displayItem(itemData) {

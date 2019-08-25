@@ -4,10 +4,8 @@
 <h3>Item List</h3>
 <div class="list-container">
 <mat-grid-list cols="2" rowHeight="2:1">
-        <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">
-            <a routerLink="/items/{{item.id}}">
+        <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">     
                 <img src="{{item.image}}" alt="{{item.name}}">
-            </a>
             <div class="feature-container">
                 <i class="material-icons tile-icon" (click)="removeItem($event, item.id, i)">delete</i>
                 <i class="material-icons tile-icon" (click)="editItem($event, item.id)">edit</i>
