@@ -1,4 +1,11 @@
 ul {
     list-style-type: none;
     padding-left: 0px;
+    li.recipe-list > * {
+        margin: 4px;
+    }
+    li.recipe-list > p {
+        font-size: 16px;
+    }
 }
+

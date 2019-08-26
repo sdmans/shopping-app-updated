@@ -21,4 +21,9 @@ export class ProfileComponent implements OnInit {
     this.locations = this.dbs.getLocations();
   }
 
+  addRecipe(event): void {
+    console.log("Adding recipe...");
+    console.log(event);
+  }
+
 }

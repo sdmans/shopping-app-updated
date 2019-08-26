@@ -96,7 +96,7 @@ Here's what I'm planning to use!
 * [ ] Create a way for users to view a previous list in the profile view. Later, you can give users the ability to add older lists to the current list. 
 
 
-**Minimum Viable Product**/
+**Minimum Viable Product** \
 At a minimum, the app should do the following:
 * Create an account and login
 * Allow users to create a list of items they need from the store with a form

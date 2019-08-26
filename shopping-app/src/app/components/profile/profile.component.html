@@ -24,9 +24,18 @@
     <!-- Should display with an icon of the item you're making. 
         Use an omelet as an example. 
         Maybe include 3 items from the list-->
-    <li>Recipe 1</li>
-    <li>Recipe 2</li>
-    <li>Recipe 3</li>
+    <li class="recipe-list">
+        <p>Scrambled Eggs</p> 
+        <button mat-button color="primary" (click)="addRecipe($event)">Add to list</button>
+    </li>
+    <li class="recipe-list">
+        <p>Steak Dinner</p> 
+        <button mat-button color="primary" (click)="addRecipe($event)">Add to list</button>
+    </li>
+    <li class="recipe-list">
+        <p>Strawberry Banana Smoothie</p> 
+        <button mat-button color="primary" (click)="addRecipe($event)">Add to list</button>
+    </li>
 </ul>
 
 <h3>Previous Shopping Lists</h3>
