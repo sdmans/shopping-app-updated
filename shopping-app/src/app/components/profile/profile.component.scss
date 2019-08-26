@@ -1,10 +1,10 @@
 ul {
     list-style-type: none;
     padding-left: 0px;
-    li.recipe-list > * {
+    li.recipe-list-item > * {
         margin: 4px;
     }
-    li.recipe-list > p {
+    li.recipe-list-item > p {
         font-size: 16px;
     }
 }

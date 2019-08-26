@@ -12,6 +12,7 @@ export class ProfileComponent implements OnInit {
 
   roommates: Roommate[];
   locations: Location[];
+  recipes$;
 
   constructor(private dbs: DatabaseService) { }
 
@@ -19,11 +20,11 @@ export class ProfileComponent implements OnInit {
     /* Retrieves roommates from database service which will eventually be available as an observable on a database */
     this.roommates = this.dbs.getRoommates();
     this.locations = this.dbs.getLocations();
+    this.recipes$ = this.dbs.getRecipes();
   }
 
-  addRecipe(event): void {
-    console.log("Adding recipe...");
-    console.log(event);
+  addRecipe(recipe): void {
+    console.log("Adding recipe...", recipe);
   }
 
 }

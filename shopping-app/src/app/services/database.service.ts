@@ -76,6 +76,21 @@ locations = [
   },
 ];
 
+recipes$ = [
+  {
+    name: "Scrambled Eggs", 
+    list: []
+  },
+  {
+    name: "Steak Dinner",
+    list: []
+  },
+  {
+    name: "Strawberry Banana Smoothie",
+    list: []
+  }
+];
+
 selectedItem$: Item;//For detail component on main page
 singleItem: Item;//For item-detail view
 
@@ -108,6 +123,10 @@ singleItem: Item;//For item-detail view
 
   getLocations() {
     return this.locations;
+  }
+
+  getRecipes() {
+    return this.recipes$;
   }
 
   addRoommate(newRoommate: Roommate) {
