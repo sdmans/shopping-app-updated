@@ -31,8 +31,8 @@ List of recently purchased items
 Favorites list
 Recipes
 
-*Concepts and Designs*\
-## Pages
+##Concepts and Designs##
+### Pages
 **Main Page**\
 Should include a description of the app and an item list view. 
 May also include recently posted and high priority items.
@@ -59,7 +59,7 @@ Includes fields for any data that the user is required to submit for their item.
 **Profile View**\
 This should allow to view current roommates, recently purchased items and recipes.
 
-## Components
+### Components
 **Navigation Component**
 
 **List Component**
