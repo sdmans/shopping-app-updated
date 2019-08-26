@@ -1,4 +1,4 @@
-# shopping-app
+# Shopping Application
 *A simple grocery shopping application for roommates*
 
 Currently implementing basic concepts for project and testing different approaches to project features.
@@ -31,7 +31,7 @@ List of recently purchased items
 Favorites list
 Recipes
 
-##Concepts and Designs##
+## Concepts and Designs
 ### Pages
 **Main Page**\
 Should include a description of the app and an item list view. 
