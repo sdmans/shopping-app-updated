@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from '../../services/database.service';
+import { ItemService } from '../../services/item.service';
 import { Roommate } from '../../shared/roommate';
 import { Location } from '../../shared/location';
 
@@ -14,7 +15,7 @@ export class ProfileComponent implements OnInit {
   locations: Location[];
   recipes$;
 
-  constructor(private dbs: DatabaseService) { }
+  constructor(private dbs: DatabaseService, private itemService: ItemService) { }
 
   ngOnInit() {
     /* Retrieves roommates from database service which will eventually be available as an observable on a database */
@@ -24,7 +25,8 @@ export class ProfileComponent implements OnInit {
   }
 
   addRecipe(recipe): void {
-    console.log("Adding recipe...", recipe);
+    console.log(recipe.name);
+    this.itemService.getRecipe(recipe.name);
   }
 
 }

@@ -5,6 +5,7 @@ import { Item } from '../shared/item';
   providedIn: 'root'
 })
 export class ItemService {
+  private selectedRecipe;
 
   private recipe = [
     {
@@ -31,22 +32,59 @@ export class ItemService {
         {
           name: 'Butter',
           link: '#',
-          image: 'https://images-na.ssl-images-amazon.com/images/I/51vVwocc7eL.jpg',
-          description: 'Kerrygold Irish Butter',
-          note: 'Any butter will do, this image was easiest',
+          image: 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2012/6/15/0/HE_butter_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371607415155.jpeg',
+          description: 'A stick or bar of butter',
+          note: 'Kerrygold Irish Butter, but any butter will do!',
           category: 'food',
           id: 'pqr'
         }
       ]
     },
     {
-
+      name: "Steak Dinner",
+      items: [
+        {
+          name: 'Steak'
+        },
+        {
+          name: 'Sweet Potato'
+        },
+        {
+          name: 'Broccoli'
+        },
+        {
+          name: 'Butter'
+        }
+      ]
+    },
+    {
+      name: "Strawberry Banana Smoothie",
+      items: [
+        {
+          name: 'Strawberries'
+        },
+        {
+          name: 'Bananas'
+        },
+        {
+          name: 'Greek Yogurt'
+        }
+      ]
     }
-  ]
+  ];
 
   constructor() { }
 
-  addRecipe() {
-    return this.recipe;
+  getRecipe(name: string) {
+    console.log('Getting recipe!');
+    this.recipe.map((recipe) => {
+      if(recipe.name === name) {
+        console.log(recipe)
+        this.selectedRecipe = recipe;
+      } else {
+        return;
+      } 
+    });
+    return this.selectedRecipe;
   }
 }
