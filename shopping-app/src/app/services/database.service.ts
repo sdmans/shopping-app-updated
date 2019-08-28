@@ -148,4 +148,6 @@ singleItem: Item;//For item-detail view
     // return selectedItemObservable;
     return this.selectedItem$;
   }
+
+  
 }
