@@ -93,6 +93,7 @@ Here's what I'm planning to use!
 * [x] Create initial account management view including roommates list and store locations
 * [x] Create a way for users to view full details for an item. May be a separate item detail view.
 * [ ] Create initial profile view and include a test item for created recipes that automatically adds items to a list
+* [ ] Create a separate page for creating recipes. This may be saved for later
 * [ ] Create a way for users to view a previous list in the profile view. Later, you can give users the ability to add older lists to the current list. 
 
 

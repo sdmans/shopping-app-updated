@@ -5,7 +5,7 @@ import { Item } from '../shared/item';
   providedIn: 'root'
 })
 export class ItemService {
-  private selectedRecipe;
+  private selectedRecipe;//Returns value for selected recipe from array
 
   private recipe = [
     {
