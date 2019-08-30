@@ -1,15 +1,13 @@
 <h2>Profile View</h2>
 
-<h3>Roommates and Locations</h3>
-
-<p><b>Roommates</b></p>
+<h3>Current Roommates</h3>
 <ul>
     <li class="roommate-list-item" *ngFor="let mate of roommates">
         <p>{{mate.name}}</p>
     </li>
 </ul>
 
-<p><b>Locations</b></p>
+<h3>Locations</h3>
 <ul>
   <li *ngFor="let locale of locations">
      <p><b>{{locale.name}}</b></p>
