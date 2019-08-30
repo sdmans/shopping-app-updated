@@ -36,7 +36,6 @@ export class DatabaseService {
       note: "Get the silky shampoo kind, if they don't have it, you can get the mint kind!",
       category: 'Hygiene',
       id: 'ghi'
-
     }
 ];
 
@@ -74,21 +73,6 @@ locations = [
     address: "678 OutofIdeas Way, Kansas",
     website: "#",
   },
-];
-
-recipes$ = [
-  {
-    name: "Scrambled Eggs", 
-    list: []
-  },
-  {
-    name: "Steak Dinner",
-    list: []
-  }
-  // {
-  //   name: "Strawberry Banana Smoothie",
-  //   list: []
-  // }
 ];
 
 selectedItem$: Item;//For detail component on main page
@@ -132,12 +116,13 @@ singleItem: Item;//For item-detail view
 
 
   /* Methods for adding and retrieving recipes */
-  getRecipes() {
-    return this.recipes$;
-  }
 
   addRecipeItems(recipeItems: Item[]): void {
     console.log(recipeItems);
+    recipeItems.map((item) => {
+      this.items$.push(item);
+    });
+    console.log(this.items$);
   }
 
   /* Methods for adding and retrieving roommates and locations */

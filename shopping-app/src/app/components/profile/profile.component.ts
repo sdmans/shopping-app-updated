@@ -21,12 +21,13 @@ export class ProfileComponent implements OnInit {
     /* Retrieves roommates from database service which will eventually be available as an observable on a database */
     this.roommates = this.dbs.getRoommates();
     this.locations = this.dbs.getLocations();
-    this.recipes$ = this.dbs.getRecipes();
+    this.recipes$ = this.itemService.getRecipies();
   }
 
   addRecipe(recipe): void {
     console.log(recipe.name);
-    this.itemService.getRecipe(recipe.name);
+    // this.itemService.getSingleRecipe(recipe.name);
+    this.itemService.addRecipeItems(recipe.items);
   }
 
 }
