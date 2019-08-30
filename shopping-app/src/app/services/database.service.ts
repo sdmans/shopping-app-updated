@@ -84,11 +84,11 @@ recipes$ = [
   {
     name: "Steak Dinner",
     list: []
-  },
-  {
-    name: "Strawberry Banana Smoothie",
-    list: []
   }
+  // {
+  //   name: "Strawberry Banana Smoothie",
+  //   list: []
+  // }
 ];
 
 selectedItem$: Item;//For detail component on main page
@@ -96,6 +96,7 @@ singleItem: Item;//For item-detail view
 
   constructor() { }
 
+  /* Methods for adding and retrieving items */
   addItem(item): void {
     this.items$.push(item);
     console.log(this.items$);
@@ -117,26 +118,6 @@ singleItem: Item;//For item-detail view
     return this.singleItem;
   }
 
-  getRoommates() {
-    return this.roommates;
-  }
-
-  getLocations() {
-    return this.locations;
-  }
-
-  getRecipes() {
-    return this.recipes$;
-  }
-
-  addRoommate(newRoommate: Roommate) {
-    this.roommates.push(newRoommate);
-  }
-
-  addLocation(newLocale: Location) {
-    this.locations.push(newLocale);
-  }
-
   setSelectedItem(item: Item) {
     this.selectedItem$ = item;
     console.log(this.selectedItem$);
@@ -147,6 +128,33 @@ singleItem: Item;//For item-detail view
     // const selectedItemObservable = of(this.selectedItem$);
     // return selectedItemObservable;
     return this.selectedItem$;
+  }
+
+
+  /* Methods for adding and retrieving recipes */
+  getRecipes() {
+    return this.recipes$;
+  }
+
+  addRecipeItems(recipeItems: Item[]): void {
+    console.log(recipeItems);
+  }
+
+  /* Methods for adding and retrieving roommates and locations */
+  addRoommate(newRoommate: Roommate) {
+    this.roommates.push(newRoommate);
+  }
+
+  addLocation(newLocale: Location) {
+    this.locations.push(newLocale);
+  }
+
+  getRoommates() {
+    return this.roommates;
+  }
+
+  getLocations() {
+    return this.locations;
   }
 
   

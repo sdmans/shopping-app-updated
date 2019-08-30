@@ -44,33 +44,61 @@ export class ItemService {
       name: "Steak Dinner",
       items: [
         {
-          name: 'Steak'
+          name: 'Steak',
+          link: 'https://www.instacart.com/stop-shop/products/17357579-stop-shop-boneless-ribeye-steak-1-per-lb',
+          image: 'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_c3d005fb-61b5-450c-a0e2-51277a85bda3.jpg',
+          description: 'Stop & Shop Boneless Ribeye Steak',
+          note: '',
+          category:'',
+          id: ''
+
         },
         {
-          name: 'Sweet Potato'
+          name: 'Sweet Potato',
+          link: 'https://www.instacart.com/stop-shop/products/17357579-stop-shop-boneless-ribeye-steak-1-per-lb',
+          image: 'https://d2lnr5mha7bycj.cloudfront.net/product-image/file/large_c3d005fb-61b5-450c-a0e2-51277a85bda3.jpg',
+          description: 'Stop & Shop Boneless Ribeye Steak',
+          note: '',
+          category:'',
+          id: ''
+
         },
         {
-          name: 'Broccoli'
+          name: 'Broccoli',
+          link: '',
+          image: '',
+          description: '',
+          note: '',
+          category:'',
+          id: ''
+
         },
         {
-          name: 'Butter'
-        }
-      ]
-    },
-    {
-      name: "Strawberry Banana Smoothie",
-      items: [
-        {
-          name: 'Strawberries'
-        },
-        {
-          name: 'Bananas'
-        },
-        {
-          name: 'Greek Yogurt'
+          name: 'Butter',
+          link: '',
+          image: '',
+          description: '',
+          note: '',
+          category:'',
+          id: ''
+
         }
       ]
     }
+    // {
+    //   name: "Strawberry Banana Smoothie",
+    //   items: [
+    //     {
+    //       name: 'Strawberries'
+    //     },
+    //     {
+    //       name: 'Bananas'
+    //     },
+    //     {
+    //       name: 'Greek Yogurt'
+    //     }
+    //   ]
+    // }
   ];
 
   constructor() { }
