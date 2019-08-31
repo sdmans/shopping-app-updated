@@ -38,6 +38,7 @@ import { ListComponent } from './components/list/list.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { SetupComponent } from './components/setup/setup.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { CreateRecipeComponent } from './components/create-recipe/create-recipe.component';
 
 
 @NgModule({
@@ -54,7 +55,8 @@ import { ItemDetailComponent } from './components/item-detail/item-detail.compon
     ListComponent,
     DetailComponent,
     SetupComponent,
-    ItemDetailComponent
+    ItemDetailComponent,
+    CreateRecipeComponent
   ],
   imports: [
     BrowserModule,
