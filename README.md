@@ -59,6 +59,9 @@ Includes fields for any data that the user is required to submit for their item.
 **Profile View**\
 This should allow to view current roommates, recently purchased items and recipes.
 
+**Create Recipe View**\
+Contains a list of items that a user's favorited that they can select to then be added to a newly created list. Once selected, the items should all revert to being unselected with some kind of notification that the recipe has been created.
+
 ### Components
 **Navigation Component**
 
@@ -93,7 +96,7 @@ Here's what I'm planning to use!
 * [x] Create initial account management view including roommates list and store locations
 * [x] Create a way for users to view full details for an item. May be a separate item detail view.
 * [x] Create initial profile view and include a test item for created recipes that automatically adds items to a list
-* [x] Create a separate page for creating recipes. This may be saved for later
+* [ ] Create a separate page for creating recipes. This may be saved for later
 * [ ] Create a way for users to view a previous test list in the profile view. You can give users the ability to add older lists to the current list later.
 
 
