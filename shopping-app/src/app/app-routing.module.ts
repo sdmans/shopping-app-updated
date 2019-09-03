@@ -11,6 +11,7 @@ import { SubmitComponent } from './components/submit/submit.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { ItemDetailComponent } from './components/item-detail/item-detail.component';
+import { CreateRecipeComponent } from './components/create-recipe/create-recipe.component';
 
 const routes: Routes = [
   { path: 'main', component: MainComponent },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'submit', component: SubmitComponent },
   { path: 'account', component: AccountComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'create', component: CreateRecipeComponent },
   { path: 'items/:id' , component: ItemDetailComponent },
   { path: '',
   redirectTo: 'main',
