@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../services/item.service';
+import { Item } from '../../shared/item';
 
 @Component({
   selector: 'app-create-recipe',
@@ -7,7 +8,7 @@ import { ItemService } from '../../services/item.service';
   styleUrls: ['./create-recipe.component.scss']
 })
 export class CreateRecipeComponent implements OnInit {
-  favorites;
+  favorites: Item[];
 
   constructor(private itemService: ItemService) { 
 
