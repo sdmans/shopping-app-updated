@@ -7,6 +7,7 @@ import { Location } from '../shared/location';
 import { listItems } from '../shared/test-data/test-data';
 import { testRoommates } from '../shared/test-data/test-data';
 import { testLocations } from '../shared/test-data/test-data';
+import { favoriteItems } from '../shared/test-data/test-data';
 
 //Modules for rxjs Observables
 import { Observable } from 'rxjs';
@@ -17,9 +18,9 @@ import { of } from 'rxjs';
 })
 export class DatabaseService {
   items$: Item[] = listItems;
-
   roommates: Roommate[] = testRoommates;
   locations: Location[] = testLocations;
+  favorites: Item[] = favoriteItems; 
 
 
   selectedItem$: Item;//For detail component on main page
@@ -89,5 +90,8 @@ export class DatabaseService {
     return this.locations;
   }
 
+  getFavoriteItems() {
+    return this.favorites;
+  }
   
 }

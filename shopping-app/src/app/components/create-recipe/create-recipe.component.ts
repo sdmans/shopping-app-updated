@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ItemService } from '../../services/item.service';
 
 @Component({
   selector: 'app-create-recipe',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./create-recipe.component.scss']
 })
 export class CreateRecipeComponent implements OnInit {
+  favorites;
 
-  constructor() { }
+  constructor(private itemService: ItemService) { 
+
+  }
 
   ngOnInit() {
+    this.favorites = this.itemService.getFavorites();
   }
 
 }

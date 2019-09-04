@@ -9,8 +9,11 @@ import { testRecipes } from '../shared/test-data/test-data';//Imports recipes fr
 export class ItemService {
   private selectedRecipe;//Returns value for selected recipe from array
   private recipes = testRecipes;
+  private favorites;
 
-  constructor(private databaseService: DatabaseService) { }
+  constructor(private databaseService: DatabaseService) {
+    this.favorites = this.databaseService.getFavoriteItems();
+   }
 
   getRecipies() {
     return this.recipes;
@@ -33,5 +36,11 @@ export class ItemService {
   addRecipeItems(items) {
     console.log("Adding recipe items...", items);
     this.databaseService.addRecipeItems(items);
+  }
+
+  /* Retrieves a list of favorite items */
+  getFavorites() {
+    console.log(this.favorites);
+    return this.favorites;
   }
 }
