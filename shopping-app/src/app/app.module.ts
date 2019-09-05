@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule }   from '@angular/forms';//To enable template-driven from features such as ngModel
+import { FormsModule, FormBuilder }   from '@angular/forms';//To enable template-driven from features such as ngModel
 
 import { AppRoutingModule } from './app-routing.module';
 /* Imported components */
@@ -79,7 +79,7 @@ import { CreateRecipeComponent } from './components/create-recipe/create-recipe.
     MatSelectModule,
     MatRadioModule
   ],
-  providers: [],
+  providers: [FormsModule, FormBuilder],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
