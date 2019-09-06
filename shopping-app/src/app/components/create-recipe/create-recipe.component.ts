@@ -31,11 +31,20 @@ export class CreateRecipeComponent implements OnInit {
     });
     if(this.newRecipe.length > 0) {
       console.log(this.newRecipe);
-      this.newRecipe.length = 0;//Setting the array's length to zero removes the current contents of the array.
-      console.log("Array submitted, current recipe is", this.newRecipe);
+      this.resetCreateRecipe();
     } else {
       console.log('Recipe is empty, no items selected!');
     }
   }
+
+  /* Function resets all checkboxes and empties the array after a recipe is submitted */
+  resetCreateRecipe() {
+    this.favorites.map((item) => {
+      item.checked = false;
+    });
+    this.newRecipe = [];//Setting the array's length to zero removes the current contents of the array.
+    console.log("Array submitted, recipe contents emptied.", this.newRecipe);
+  }
+
 
 }
