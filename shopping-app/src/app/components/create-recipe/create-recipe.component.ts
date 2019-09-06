@@ -12,15 +12,18 @@ export class CreateRecipeComponent implements OnInit {
   form: FormGroup;
   favorites: Item[];
 
-
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) { 
+    this.favorites = this.itemService.getFavorites();
     this.form = this.formBuilder.group({
       favorites: new FormArray([])
-    })
+    });
+
+    this.addCheckboxes();
   }
 
   ngOnInit() {
-    this.favorites = this.itemService.getFavorites();
+
+    console.log(this.form);
   }
 
   addCheckboxes() {
@@ -31,7 +34,7 @@ export class CreateRecipeComponent implements OnInit {
   }
 
   submit() {
-    const selectedItemIds = this.form.value.orders
+    const selectedItemIds = this.form.value.favorites
     .map((v, i) => v ? this.favorites[i].id : null)
     .filter(v => v !== null);
     console.log(selectedItemIds);

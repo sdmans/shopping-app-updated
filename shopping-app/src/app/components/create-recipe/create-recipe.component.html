@@ -14,6 +14,11 @@
         <p>{{fave.name}}</p>
     </li>
 </ul> -->
-<form [formGroup]="form" (ngSubmit)="submit()">
+<form [formGroup]="form" (ngSubmit)="submit()">            
+        <!-- <label formArrayName="favorites" *ngFor="let fave of form.controls.favorites.controls">
+            <input type="checkbox" id="item{{i}}">
+            <img src="{{fave.image}}" alt="{{fave.name}}">
+        </label>
+        <p>{{fave.name}}</p> -->
 
 </form>
