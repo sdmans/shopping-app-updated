@@ -38,9 +38,10 @@ export class ItemService {
     this.databaseService.addRecipeItems(items);
   }
 
-  /* Retrieves a list of favorite items */
+  /* Retrieves a list of favorite items from database. May be used to sort retrieved data later */
   getFavorites() {
     console.log(this.favorites);
     return this.favorites;
   }
+
 }

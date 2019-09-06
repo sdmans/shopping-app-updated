@@ -23,4 +23,18 @@ export class CreateRecipeComponent implements OnInit {
     this.favorites = this.itemService.getFavorites();
   }
 
+  addCheckboxes() {
+    this.favorites.map((o, i) => {
+      const control = new FormControl(i === 0);
+      (this.form.controls.favorites as FormArray).push(control);
+    })
+  }
+
+  submit() {
+    const selectedItemIds = this.form.value.orders
+    .map((v, i) => v ? this.favorites[i].id : null)
+    .filter(v => v !== null);
+    console.log(selectedItemIds);
+  }
+
 }

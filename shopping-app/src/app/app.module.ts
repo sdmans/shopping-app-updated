@@ -1,9 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { FormsModule, FormBuilder }   from '@angular/forms';//To enable template-driven from features such as ngModel
+import { FormsModule, ReactiveFormsModule, FormBuilder }   from '@angular/forms';//To enable template-driven from features such as ngModel
 
 import { AppRoutingModule } from './app-routing.module';
+
 /* Imported components */
 import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
@@ -61,6 +62,7 @@ import { CreateRecipeComponent } from './components/create-recipe/create-recipe.
   imports: [
     BrowserModule,
     FormsModule,//Gives application access to all template-driven forms and features including ngModel
+    ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features,
