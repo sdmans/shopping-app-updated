@@ -1,12 +1,12 @@
 /* Check mark Image solution customized from https://stackoverflow.com/questions/30663562/use-images-like-checkboxes */
-ul {
-    list-style-type: none;
-    padding-left: 0px;
-    margin: 0 auto;
-  }
 
-li {
+div {
     display: inline-block;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
 }
 
 input {

@@ -12,6 +12,7 @@ export class Item {
     name: string;
     link: string;
     image: string;
+    checked?: boolean; 
     priority?: string;
     description?: string;
     note?: string;

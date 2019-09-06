@@ -41,6 +41,9 @@ export class ItemService {
   /* Retrieves a list of favorite items from database. May be used to sort retrieved data later */
   getFavorites() {
     console.log(this.favorites);
+    this.favorites.map((item) => {
+      item.checked = false;
+    });
     return this.favorites;
   }
 
