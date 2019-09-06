@@ -4,16 +4,16 @@
 </div>
 
 <h3>Favorited Items</h3>
-<!-- <ul>
+<ul>
     <li *ngFor="let fave of favorites; let i = index">
-        <input type="checkbox" id="item{{i}}"> -->
+        <input type="checkbox" id="item{{i}}">
         <!-- See if you can generate a custom input ID using the index property of a loop -->
-        <!-- <label for="item{{i}}">
+        <label for="item{{i}}">
             <img src="{{fave.image}}" alt="{{fave.name}}">
         </label>
         <p>{{fave.name}}</p>
     </li>
-</ul> -->
+</ul>
 <form [formGroup]="form" (ngSubmit)="submit()">            
         <!-- <label formArrayName="favorites" *ngFor="let fave of form.controls.favorites.controls">
             <input type="checkbox" id="item{{i}}">
