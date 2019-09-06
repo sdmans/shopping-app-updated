@@ -10,8 +10,10 @@ import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@an
 })
 export class CreateRecipeComponent implements OnInit {
   favorites: Item[];
+  newRecipe: Item[] = [];
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) { 
+    
     this.favorites = this.itemService.getFavorites();
   }
 
@@ -20,7 +22,20 @@ export class CreateRecipeComponent implements OnInit {
   }
 
   submitRecipe() {
-
+    this.favorites.map((item) => {
+      if(item.checked) {
+        this.newRecipe.push(item);
+      } else {
+        console.log('No items selected!');
+      }
+    });
+    if(this.newRecipe.length > 0) {
+      console.log(this.newRecipe);
+      this.newRecipe.length = 0;//Setting the array's length to zero removes the current contents of the array.
+      console.log("Array submitted, current recipe is", this.newRecipe);
+    } else {
+      console.log('Recipe is empty, no items selected!');
+    }
   }
 
 }
