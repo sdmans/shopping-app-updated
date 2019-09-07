@@ -10,7 +10,11 @@ import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@an
 })
 export class CreateRecipeComponent implements OnInit {
   favorites: Item[];
-  newRecipe: Item[] = [];
+  selectedItems: Item[] = [];
+  newRecipe: {
+    name: '',
+    items: []
+  };
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) { 
     
@@ -21,20 +25,35 @@ export class CreateRecipeComponent implements OnInit {
     console.log(this.favorites);
   }
 
-  submitRecipe() {
-    this.favorites.map((item) => {
-      if(item.checked) {
-        this.newRecipe.push(item);
-      } else {
-        console.log('No items selected!');
-      }
-    });
-    if(this.newRecipe.length > 0) {
-      console.log(this.newRecipe);
-      this.resetCreateRecipe();
+  addItem(selectedItem) {
+    if (selectedItem.checked) {
+      console.log('Adding item');
+      this.selectedItems.push(selectedItem);
     } else {
-      console.log('Recipe is empty, no items selected!');
+      console.log('removing Item');
+      /* Removed unchecked item from the array */
+      this.selectedItems.map((item, index) => {
+        if (selectedItem.id === item.id) {
+          this.selectedItems.splice(index, 1);
     }
+      })
+    }
+  }
+
+  submitRecipe() {
+    // this.favorites.map((item) => {
+    //   if(item.checked) {
+    //     this.selectedItems.push(item);
+    //   } else {
+    //     console.log('No items selected!');
+    //   }
+    // });
+    // if(this.selectedItems.length > 0) {
+    //   console.log(this.newRecipe);
+    //   this.resetCreateRecipe();
+    // } else {
+    //   console.log('Recipe is empty, no items selected!');
+    // }
   }
 
   /* Function resets all checkboxes and empties the array after a recipe is submitted */
@@ -42,7 +61,8 @@ export class CreateRecipeComponent implements OnInit {
     this.favorites.map((item) => {
       item.checked = false;
     });
-    this.newRecipe = [];//Setting the array's length to zero removes the current contents of the array.
+    this.selectedItems = [];
+    this.newRecipe.items = [];//Setting the array's length to zero removes the current contents of the array.
     console.log("Array submitted, recipe contents emptied.", this.newRecipe);
   }
 

@@ -3,11 +3,23 @@
     <p>Create your own recipe from a list of your favorite items!</p>
 </div>
 
+<h3>Current Recipe</h3>
+<p class="recipe-title">Name: </p>
+<p>Item List</p>
+<ul class="recipe-container">
+    <li *ngIf="selectedItems.length === 0">
+        <p>No Items selected</p>
+    </li>
+    <li *ngFor="let item of selectedItems">
+        <p>{{item.name}}</p>
+    </li>
+</ul>
+
 <h3>Favorited Items</h3>
 
 <form #checkboxForm="ngForm" (submit)="submitRecipe()">
-    <div *ngFor="let fave of favorites; let i = index">
-        <input type="checkbox" id="item{{i}}" name="item{{i}}" value="{{fave}}" [(ngModel)]="fave.checked">
+    <div class="input-container" *ngFor="let fave of favorites; let i = index">
+        <input type="checkbox" id="item{{i}}" name="item{{i}}" value="{{fave}}" [(ngModel)]="fave.checked" (change)="addItem(fave)">
         <label for="item{{i}}">
             <img src="{{fave.image}}" alt="{{fave.name}}">
         </label>
