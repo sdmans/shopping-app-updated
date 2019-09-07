@@ -16,8 +16,11 @@
 </ul>
 
 <h3>Favorited Items</h3>
+<label for="recipeName">Recipe Name</label>
+<input placeholder="Recipe Name">
 
-<form #checkboxForm="ngForm" (submit)="submitRecipe()">
+
+<form #recipeForm="ngForm" (submit)="submitRecipe()">
     <div class="input-container" *ngFor="let fave of favorites; let i = index">
         <input type="checkbox" id="item{{i}}" name="item{{i}}" value="{{fave}}" [(ngModel)]="fave.checked" (change)="addItem(fave)">
         <label for="item{{i}}">

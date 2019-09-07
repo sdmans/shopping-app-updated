@@ -10,11 +10,8 @@ import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@an
 })
 export class CreateRecipeComponent implements OnInit {
   favorites: Item[];
-  selectedItems: Item[] = [];
-  newRecipe: {
-    name: '',
-    items: []
-  };
+  selectedItems = [];
+  recipeName: string;
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) { 
     
@@ -41,29 +38,26 @@ export class CreateRecipeComponent implements OnInit {
   }
 
   submitRecipe() {
-    // this.favorites.map((item) => {
-    //   if(item.checked) {
-    //     this.selectedItems.push(item);
-    //   } else {
-    //     console.log('No items selected!');
-    //   }
-    // });
-    // if(this.selectedItems.length > 0) {
-    //   console.log(this.newRecipe);
-    //   this.resetCreateRecipe();
-    // } else {
-    //   console.log('Recipe is empty, no items selected!');
-    // }
+    if(this.selectedItems.length > 0) {
+      const newRecipe = {
+        name: "",
+        items: this.selectedItems
+      };
+      console.log(newRecipe);
+      this.resetRecipe();
+    } else {
+      console.log('Recipe is empty, no items selected!');
+    }
   }
 
   /* Function resets all checkboxes and empties the array after a recipe is submitted */
-  resetCreateRecipe() {
+  resetRecipe() {
+    // debugger
     this.favorites.map((item) => {
       item.checked = false;
     });
     this.selectedItems = [];
-    this.newRecipe.items = [];//Setting the array's length to zero removes the current contents of the array.
-    console.log("Array submitted, recipe contents emptied.", this.newRecipe);
+    console.log("Array submitted, recipe contents emptied.", this.selectedItems);
   }
 
 
