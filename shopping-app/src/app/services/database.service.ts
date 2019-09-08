@@ -8,6 +8,7 @@ import { listItems } from '../shared/test-data/test-data';
 import { testRoommates } from '../shared/test-data/test-data';
 import { testLocations } from '../shared/test-data/test-data';
 import { favoriteItems } from '../shared/test-data/test-data';
+import { testRecipes } from '../shared/test-data/test-data';
 
 //Modules for rxjs Observables
 import { Observable } from 'rxjs';
@@ -21,6 +22,7 @@ export class DatabaseService {
   roommates: Roommate[] = testRoommates;
   locations: Location[] = testLocations;
   favorites: Item[] = favoriteItems; 
+  recipes$ = testRecipes;
 
 
   selectedItem$: Item;//For detail component on main page
@@ -37,6 +39,8 @@ export class DatabaseService {
   retrieveItems() {
     return this.items$;
   }
+
+
 
   getItemById(id: string) {
     console.log(id);
@@ -64,7 +68,12 @@ export class DatabaseService {
 
 
   /* Methods for adding and retrieving recipes */
+  /* Adds a new recipe */
+  addRecipe(recipe) {
+    return this.recipes$;
+  }
 
+  /* Adds items from recipe to shopping list */
   addRecipeItems(recipeItems: Item[]): void {
     console.log(recipeItems);
     recipeItems.map((item) => {
@@ -92,6 +101,10 @@ export class DatabaseService {
 
   getFavoriteItems() {
     return this.favorites;
+  }
+
+  getRecipes() {
+    return this.recipes$;
   }
   
 }

@@ -8,14 +8,15 @@ import { testRecipes } from '../shared/test-data/test-data';//Imports recipes fr
 })
 export class ItemService {
   private selectedRecipe;//Returns value for selected recipe from array
-  private recipes = testRecipes;
+  private recipes;
   private favorites;
 
   constructor(private databaseService: DatabaseService) {
     this.favorites = this.databaseService.getFavoriteItems();
+    this.recipes = this.databaseService.getRecipes();
    }
 
-  getRecipies() {
+  getRecipes() {
     return this.recipes;
   }
 
