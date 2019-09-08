@@ -33,6 +33,11 @@ export class ItemService {
     return this.selectedRecipe;
   }
 
+  /* Add new recipe to database. May be used to add categories later */
+  addRecipe(recipe) {
+    this.databaseService.addRecipe(recipe);
+  }
+
   /* May be used to check if items are already added to the list before they're added to the database */
   addRecipeItems(items) {
     console.log("Adding recipe items...", items);

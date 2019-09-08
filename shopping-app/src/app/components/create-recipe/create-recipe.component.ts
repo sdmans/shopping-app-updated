@@ -40,10 +40,10 @@ export class CreateRecipeComponent implements OnInit {
   submitRecipe() {
     if(this.selectedItems.length > 0) {
       const newRecipe = {
-        name: "",
+        name: "testRecipe",
         items: this.selectedItems
       };
-      console.log(newRecipe);
+      this.itemService.addRecipe(newRecipe);
       this.resetRecipe();
     } else {
       console.log('Recipe is empty, no items selected!');

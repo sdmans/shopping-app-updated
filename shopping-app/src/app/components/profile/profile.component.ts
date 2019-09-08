@@ -22,12 +22,10 @@ export class ProfileComponent implements OnInit {
     this.roommates = this.dbs.getRoommates();
     this.locations = this.dbs.getLocations();
     this.recipes$ = this.itemService.getRecipes();
-    console.log(this.recipes$);
   }
 
   addRecipe(recipe): void {
     console.log(recipe.name);
-    // this.itemService.getSingleRecipe(recipe.name);
     this.itemService.addRecipeItems(recipe.items);
   }
 

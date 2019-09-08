@@ -68,9 +68,9 @@ export class DatabaseService {
 
 
   /* Methods for adding and retrieving recipes */
-  /* Adds a new recipe */
+  /* Adds a new recipe to list of recipes */
   addRecipe(recipe) {
-    return this.recipes$;
+    this.recipes$.push(recipe);
   }
 
   /* Adds items from recipe to shopping list */
