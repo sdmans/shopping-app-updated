@@ -15,12 +15,12 @@
     </li>
 </ul>
 
-<h3>Favorited Items</h3>
-<label for="recipeName">Recipe Name</label>
-<input placeholder="Recipe Name">
-
-
 <form #recipeForm="ngForm" (submit)="submitRecipe()">
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Recipe Name" [(ngModel)]="recipeName" name="recipeName">
+    </mat-form-field>
+
+    <h3>Favorited Items</h3>
     <div class="input-container" *ngFor="let fave of favorites; let i = index">
         <input type="checkbox" id="item{{i}}" name="item{{i}}" value="{{fave}}" [(ngModel)]="fave.checked" (change)="addItem(fave)">
         <label for="item{{i}}">
@@ -32,5 +32,5 @@
     </div>
 
     
-    <button type="submit">Submit Recipe</button>
+    <button mat-raised-button type="submit">Submit Recipe</button>
 </form>

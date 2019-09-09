@@ -19,6 +19,7 @@ div.input-container {
 button {
     display: block;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 input[type="checkbox"] {
@@ -76,7 +77,3 @@ label img {
     box-shadow: 0 0 5px #333;
     z-index: -1;
 }
-
-// label:before {
-//     z-index: 1;
-// }
