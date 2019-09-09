@@ -53,12 +53,13 @@ export class CreateRecipeComponent implements OnInit {
   }
 
   submitRecipe(name: string) {
-    console.log(name);
-    if(this.selectedItems.length > 0) {
+    this.recipeName = name;
+    if(this.selectedItems.length > 0 && this.recipeName !== undefined || this.recipeName.length > 0) {
       const newRecipe = {
-        name: "testRecipe",
+        name: this.recipeName,
         items: this.selectedItems
       };
+      console.log(newRecipe);
       this.itemService.addRecipe(newRecipe);
       this.resetRecipe();
     } else {
