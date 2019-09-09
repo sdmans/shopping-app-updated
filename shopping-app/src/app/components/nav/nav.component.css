@@ -37,4 +37,16 @@
     display: none;
   }
 }
+
+@media (max-width: 1052px) and (min-width: 601px) {
+  .mat-toolbar span {
+    margin-right: 5px;
+  }
+}
+
+@media (max-width: 1300px) and (min-width: 601px) {
+  .mat-toolbar span a {
+    font-size: 16px;
+  }
+}
 /*# sourceMappingURL=nav.component.css.map */

@@ -1,1 +1,27 @@
-/* No CSS *//*# sourceMappingURL=profile.component.css.map */
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+ul li.roommate-list-item {
+  display: inline-block;
+  margin: 10px 20px 10px 20px;
+  padding: 20px 40px 20px 40px;
+  height: 60px;
+  width: 40px;
+  border: 1px solid #E8E8E8;
+  border-radius: 10px;
+}
+
+ul li.roommate-list-item p {
+  font-size: 20px;
+}
+
+ul li.recipe-list-item > * {
+  margin: 4px;
+}
+
+ul li.recipe-list-item > p {
+  font-size: 16px;
+}
+/*# sourceMappingURL=profile.component.css.map */

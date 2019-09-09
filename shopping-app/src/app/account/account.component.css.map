@@ -2,8 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "submit.component.scss"
+        "account.component.scss"
     ],
     "names": [],
-    "file": "submit.component.css"
+    "file": "account.component.css"
 }

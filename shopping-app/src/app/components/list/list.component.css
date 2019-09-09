@@ -1,0 +1,85 @@
+/*Variables for media queries */
+h3 {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* CSS for the list tile view */
+div.list-container {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+@media (max-width: 792px) {
+  div.list-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+
+@media (min-width: 793px) and (max-width: 992px) {
+  div.list-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.mat-grid-tile {
+  background: #c1e1ec;
+}
+
+mat-grid-tile:hover {
+  background: #5b8fa0;
+}
+
+i.tile-icon {
+  font-size: 50px;
+  cursor: pointer;
+}
+
+@media (max-width: 792px) {
+  i.tile-icon {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 412px) {
+  i.tile-icon {
+    font-size: 24px;
+  }
+}
+
+i.tile-icon:nth-child(2n) {
+  margin-top: 50px;
+}
+
+@media (max-width: 792px) {
+  i.tile-icon:nth-child(2n) {
+    margin-top: 35px;
+  }
+}
+
+@media (max-width: 412px) {
+  i.tile-icon:nth-child(2n) {
+    margin-top: 10px;
+  }
+}
+
+img {
+  width: 80%;
+  height: 90%;
+  border-radius: 10px;
+}
+
+div.feature-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border: 1px solid black;
+  margin-left: 4px;
+}
+/*# sourceMappingURL=list.component.css.map */

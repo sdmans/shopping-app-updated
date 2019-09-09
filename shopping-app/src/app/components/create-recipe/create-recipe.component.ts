@@ -1,7 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../services/item.service';
 import { Item } from '../../shared/item';
-import { FormBuilder, FormGroup, FormArray, FormControl, ValidatorFn } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, FormControl, FormGroupDirective, NgForm, Validators, ValidatorFn } from '@angular/forms';
+import {ErrorStateMatcher} from '@angular/material/core';
+
+/** Error when invalid control is dirty, touched, or submitted. Source: https://material.angular.io/components/input/examples */
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-create-recipe',
@@ -12,6 +21,12 @@ export class CreateRecipeComponent implements OnInit {
   favorites: Item[];
   selectedItems = [];
   recipeName: string;
+
+  nameFormControl = new FormControl('', [
+    Validators.required
+  ]);
+
+  matcher = new MyErrorStateMatcher();
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder) { 
     
@@ -37,7 +52,8 @@ export class CreateRecipeComponent implements OnInit {
     }
   }
 
-  submitRecipe() {
+  submitRecipe(name: string) {
+    console.log(name);
     if(this.selectedItems.length > 0) {
       const newRecipe = {
         name: "testRecipe",

@@ -15,10 +15,18 @@
     </li>
 </ul>
 
-<form #recipeForm="ngForm" (submit)="submitRecipe()">
+<form #recipeForm="ngForm" (submit)="submitRecipe(name.value)">
     <mat-form-field class="example-full-width">
-        <input matInput placeholder="Recipe Name" [(ngModel)]="recipeName" name="recipeName">
+        <input #name matInput placeholder="Recipe Name" [formControl]="nameFormControl" [errorStateMatcher]="matcher" name="recipeName">
     </mat-form-field>
+
+    <mat-hint>Enter the name of your recipe!</mat-hint>
+    <mat-error *ngIf="nameFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid name
+    </mat-error>
+    <mat-error *ngIf="nameFormControl.hasError('required') && !nameFormControl.untouched">
+      Recipe name is <strong>required</strong>
+    </mat-error>
 
     <h3>Favorited Items</h3>
     <div class="input-container" *ngFor="let fave of favorites; let i = index">

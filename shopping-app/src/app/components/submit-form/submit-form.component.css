@@ -1,0 +1,35 @@
+/* CSS for the material form. May become a separate component soon */
+.submit-form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.submit-input-container > * {
+  width: 100%;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+button {
+  margin: 20px;
+}
+
+/* Styles for item preview */
+.item-preview-container {
+  border: 1px solid pink;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.preview-img {
+  max-height: 400px;
+  max-width: 80%;
+}
+/*# sourceMappingURL=submit-form.component.css.map */

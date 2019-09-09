@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,yBAAyB,CAAC;EACtB,OAAO,EAAE,IAAI;EACb,cAAc,EAAE,MAAM;CACvB;;AAED,AAAA,yBAAyB,GAAG,CAAC,CAAC;EAC5B,KAAK,EAAE,IAAI;CACZ",
     "sources": [
         "register.component.scss"
     ],

@@ -1,1 +1,18 @@
-/* No CSS *//*# sourceMappingURL=account.component.css.map */
+ul {
+  list-style-type: none;
+  padding-left: 0px;
+}
+
+div.location-input-container {
+  width: auto;
+  height: auto;
+  max-width: 400px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+div.location-input-container > * {
+  display: block;
+  margin: 10px 0px;
+}
+/*# sourceMappingURL=account.component.css.map */
