@@ -54,7 +54,7 @@ export class CreateRecipeComponent implements OnInit {
 
   submitRecipe(name: string) {
     this.recipeName = name;
-    if(this.selectedItems.length > 0 && this.recipeName !== undefined || this.recipeName.length > 0) {
+    if(this.selectedItems.length > 0 && this.recipeName !== undefined && this.recipeName.length > 0) {
       const newRecipe = {
         name: this.recipeName,
         items: this.selectedItems
@@ -63,7 +63,7 @@ export class CreateRecipeComponent implements OnInit {
       this.itemService.addRecipe(newRecipe);
       this.resetRecipe();
     } else {
-      console.log('Recipe is empty, no items selected!');
+      console.log('Recipe is empty, have you selected your items and given the recipe a name?');
     }
   }
 

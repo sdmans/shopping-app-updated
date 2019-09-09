@@ -26,6 +26,7 @@ export class ProfileComponent implements OnInit {
 
   addRecipe(recipe): void {
     console.log(recipe.name);
+    console.log(recipe);
     this.itemService.addRecipeItems(recipe.items);
   }
 
