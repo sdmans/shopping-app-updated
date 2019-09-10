@@ -94,10 +94,15 @@ Here's what I'm planning to use!
 * [x] Create list view using Angular Material
 * [x] Create method to add and remove items to list with test data
 * [x] Create initial account management view including roommates list and store locations
-* [x] Create a way for users to view full details for an item. May be a separate item detail view.
+* [x] Create a way for users to view full details for an item. May be a separate item detail view
 * [x] Create initial profile view and include a test item for created recipes that automatically adds items to a list
-* [ ] Create a separate page for creating recipes. This may be saved for later
-* [ ] Create a way for users to view a previous test list in the profile view. You can give users the ability to add older lists to the current list later.
+* [x] Create a separate page for creating recipes
+* [ ] Create way for users to add roommates and prices to each item
+
+**Phase 3: Clean up current forms and features, then implement database**
+* [ ] Adjust forms so that they don't submit without the appropriate data and provide error feedback to users
+* [ ] Prepare login form layout with additional login features for google and facebook
+* [ ] Connect features to firebase to test concepts with observables
 
 
 **Minimum Viable Product** \
