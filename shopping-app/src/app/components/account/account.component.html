@@ -11,10 +11,10 @@
   </mat-select>
 </mat-form-field> -->
 <ul>
-    <li *ngFor="let mate of roommates$">
+    <li class="roommate-list-item" *ngFor="let mate of roommates$">
         <p>{{mate.name}}</p>
     </li>
-</ul>
+</ul> 
 
 <h4>Add a Roommate</h4>
 <p>Roommate Name: {{roommateName}}</p>
