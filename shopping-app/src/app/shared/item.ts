@@ -12,6 +12,7 @@ export class Item {
     name: string;
     link: string;
     image: string;
+    price?: number;
     checked?: boolean; 
     priority?: string;
     description?: string;
