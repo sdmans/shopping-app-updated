@@ -19,9 +19,21 @@
                 <mat-form-field class="form-group">
                     <textarea class="form-control" name="description" matInput placeholder="Description" required [(ngModel)]="_item.description"></textarea>
                 </mat-form-field>
+
+                <mat-form-field class="form-group">
+                    <textarea class="form-control" name="price" matInput placeholder="Item Price" [(ngModel)]="_item.price"></textarea>
+                </mat-form-field>
+
                 <mat-form-field class="form-group">
                     <textarea class="form-control" name="note" matInput placeholder="Note" [(ngModel)]="_item.note"></textarea>
                 </mat-form-field>
+
+                <mat-form-field class="form-group">
+                    <mat-select class="form-control" name="roommate" placeholder="Select a roommate" required [(ngModel)]="_item.orderedBy">
+                        <!-- mat loops through an array of Roommates-->
+                          <mat-option *ngFor="let mate of roommates" [value]="mate.name">{{mate.name | titlecase}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
 
                 <mat-form-field class="form-group">
                   <mat-select class="form-control" name="category" placeholder="Select a category" required [(ngModel)]="_item.category">
@@ -52,8 +64,11 @@
     <p>{{_item.description}}</p>
     <p>Category: {{_item.category | titlecase}}</p>
     <p>Priority: {{_item.priority}}</p>
+    <p>Price: {{_item.price}}</p>
     <p>Note</p>
     <p>{{_item.note}}</p>
+    <p>{{_item.orderedBy}}</p>
+    <p>{{_item.priority}}</p>
     <p>Here's a link to the <a href="{{_item.link}}" target="_blank">item</a></p>
 </div>
 

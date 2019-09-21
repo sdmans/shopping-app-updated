@@ -21,5 +21,6 @@ export class Item {
     quantity?: number;
     datePosted?: number;
     lastOrdered?: number;
+    orderedBy?: String;
     purchasedBy?: string;
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { DatabaseService } from './../../services/database.service';
 
 import { Item } from '../../shared/item';
+import { Roommate } from '../../shared/roommate';
 
 @Component({
   selector: 'app-submit-form',
@@ -10,6 +11,8 @@ import { Item } from '../../shared/item';
 })
 export class SubmitFormComponent implements OnInit {
   _item: Item;
+  roommates: Roommate[];
+
   item: Item = {
     name: 'eggs',
     link: 'https://shop.safeway.com/product-details.138350308.html',
@@ -31,9 +34,11 @@ export class SubmitFormComponent implements OnInit {
 
   constructor(private db: DatabaseService) { 
     this._item = new Item();//ngModel will give errors without the object being initiated first.
+    this.roommates = this.db.getRoommates();
   }
 
   ngOnInit() {
+    console.log(this.roommates);
   }
 
   submitItem() {
