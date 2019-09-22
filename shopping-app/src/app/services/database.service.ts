@@ -40,8 +40,6 @@ export class DatabaseService {
     return this.items$;
   }
 
-
-
   getItemById(id: string) {
     console.log(id);
     this.items$.map((item) => {

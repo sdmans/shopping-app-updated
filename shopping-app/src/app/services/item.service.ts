@@ -10,10 +10,14 @@ export class ItemService {
   private selectedRecipe;//Returns value for selected recipe from array
   private recipes;
   private favorites;
+  private totalPrice: number;
+  private listItems: Item[];
 
-  constructor(private databaseService: DatabaseService) {
-    this.favorites = this.databaseService.getFavoriteItems();
-    this.recipes = this.databaseService.getRecipes();
+  constructor(private dbs: DatabaseService) {
+    this.favorites = this.dbs.getFavoriteItems();
+    this.recipes = this.dbs.getRecipes();
+    this.listItems = this.dbs.retrieveItems();
+    this.totalPrice = 0;
    }
 
   getRecipes() {
@@ -35,22 +39,29 @@ export class ItemService {
 
   /* Add new recipe to database. May be used to add categories later */
   addRecipe(recipe) {
-    this.databaseService.addRecipe(recipe);
+    this.dbs.addRecipe(recipe);
   }
 
   /* May be used to check if items are already added to the list before they're added to the database */
   addRecipeItems(items) {
     console.log("Adding recipe items...", items);
-    this.databaseService.addRecipeItems(items);
+    this.dbs.addRecipeItems(items);
   }
 
   /* Retrieves a list of favorite items from database. May be used to sort retrieved data later */
   getFavorites() {
-    console.log(this.favorites);
-    this.favorites.map((item) => {
+    console.log(this.listItems);
+    this.listItems.map((item) => {
       item.checked = false;
     });
     return this.favorites;
+  }
+
+  calculateTotalPrice(){
+    this.listItems.map((item) => {
+      this.totalPrice += item.price;
+    });
+    return this.totalPrice;
   }
 
 }

@@ -1,6 +1,10 @@
 <app-detail [item]="selectedItem"></app-detail>
 
 <!-- List items determine the number of tiles-->
+<div class="price-container">
+    <p>PRICE: {{this.totalPrice}}</p>
+</div>
+
 <h3>Item List</h3>
 <div class="list-container">
 <mat-grid-list cols="2" rowHeight="2:1">
