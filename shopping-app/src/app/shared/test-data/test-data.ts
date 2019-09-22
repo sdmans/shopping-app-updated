@@ -43,7 +43,8 @@ export const listItems = [
             description: 'A dozen eggs for scramblin',
             note: 'Get the cage free kind!',
             category: 'food',
-            id: 'abc'
+            id: 'abc',
+            orderedBy: 'Sam'
         },
         {
             name: 'Pasta',
@@ -52,7 +53,8 @@ export const listItems = [
             description: 'Whole grain penne pasta',
             note: 'Make sure to get whole grain, it should be in a darker brown color!',
             category: 'food',
-            id: 'def'
+            id: 'def',
+            orderedby: 'Rey'
         },
         {
             name: 'Shampoo',
@@ -61,7 +63,8 @@ export const listItems = [
             description: 'Head and Shoulders Shampoo',
             note: "Get the silky shampoo kind, if they don't have it, you can get the mint kind!",
             category: 'Hygiene',
-            id: 'ghi'
+            id: 'ghi',
+            orderedBy: 'Matt'
         }
 ];
 
