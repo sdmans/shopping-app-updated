@@ -44,7 +44,8 @@ export const listItems = [
             note: 'Get the cage free kind!',
             category: 'food',
             id: 'abc',
-            orderedBy: 'Sam'
+            orderedBy: 'Sam',
+            price: 4.99
         },
         {
             name: 'Pasta',
@@ -54,7 +55,8 @@ export const listItems = [
             note: 'Make sure to get whole grain, it should be in a darker brown color!',
             category: 'food',
             id: 'def',
-            orderedby: 'Rey'
+            orderedby: 'Rey',
+            price: 2.99
         },
         {
             name: 'Shampoo',
@@ -64,7 +66,8 @@ export const listItems = [
             note: "Get the silky shampoo kind, if they don't have it, you can get the mint kind!",
             category: 'Hygiene',
             id: 'ghi',
-            orderedBy: 'Matt'
+            orderedBy: 'Matt',
+            price: 3.99
         }
 ];
 
