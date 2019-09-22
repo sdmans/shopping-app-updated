@@ -13,6 +13,7 @@ export class ListComponent implements OnInit {
 items$: Item[] = [];
 // @Output() selectItem = new EventEmitter<Item>();
 selectedItem;
+totalPrice: Number;
 
   constructor(private dbs: DatabaseService) { }
 
@@ -39,6 +40,11 @@ selectedItem;
   editItem(event: Event, id) {
     event.stopPropagation();
     console.log('Editing item...', id);
+  }
+
+  /* Method to get the total price for each item on the list */
+  getTotalPrice() {
+    
   }
 
 }

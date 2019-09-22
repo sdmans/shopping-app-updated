@@ -17,43 +17,6 @@ locationLink = "";
 roommates$: Roommate[];
 locations$: Location[];
 
-
-// roommates: Roommate[] = [
-//   {
-//     name: "Sam",
-//     value: 1
-//   },
-//   {
-//     name: "Rey",
-//     value: 2
-//   },
-//   {
-//     name: "Matt",
-//     value: 3
-//   }, {
-//     name: "Zack",
-//     value: 4
-//   } 
-// ];
-
-// locations: Location[] = [
-//   {
-//     name: "Safeway",
-//     address: "123 Fake Street, New York",
-//     website: "#",
-//   },
-//   {
-//     name: "Stop & Shop",
-//     address: "345 Madeup Avenue, Milwaukee",
-//     website: "#",
-//   },
-//   {
-//     name: "Wegmans",
-//     address: "678 OutofIdeas Way, Kansas",
-//     website: "#",
-//   },
-// ];
-
   constructor(private dbs: DatabaseService) { }
 
   ngOnInit() {
