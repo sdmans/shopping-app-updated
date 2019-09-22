@@ -18,6 +18,7 @@ export class ItemService {
     this.recipes = this.dbs.getRecipes();
     this.listItems = this.dbs.retrieveItems();
     this.totalPrice = 0;
+    this.calculateTotalPrice();
    }
 
   getRecipes() {
@@ -57,10 +58,13 @@ export class ItemService {
     return this.favorites;
   }
 
-  calculateTotalPrice(){
+  private calculateTotalPrice(): void {
     this.listItems.map((item) => {
       this.totalPrice += item.price;
     });
+  }
+
+  getTotalPrice() {
     return this.totalPrice;
   }
 

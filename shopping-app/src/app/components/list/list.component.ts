@@ -16,13 +16,12 @@ selectedItem: Item;
 totalPrice: number;
 
   constructor(private dbs: DatabaseService, private itemService: ItemService) { 
-    this.totalPrice = 0;
+    this.totalPrice = this.retrieveTotalPrice();
   }
 
   ngOnInit() {
     this.items$ = this.dbs.retrieveItems();
-    this.getTotalPrice();
-    console.log(typeof(this.totalPrice));
+    // console.log(typeof(this.totalPrice));
   }
 
 
@@ -53,8 +52,8 @@ totalPrice: number;
   }
 
   /* Method to get the total price for each item on the list */
-  getTotalPrice() {
-    this.totalPrice = this.itemService.calculateTotalPrice();
+  retrieveTotalPrice() {
+    return this.itemService.getTotalPrice();
   }
 
   updatePrice(item: Item) {
