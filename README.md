@@ -97,7 +97,9 @@ Here's what I'm planning to use!
 * [x] Create a way for users to view full details for an item. May be a separate item detail view
 * [x] Create initial profile view and include a test item for created recipes that automatically adds items to a list
 * [x] Create a separate page for creating recipes
-* [ ] Create way for users to add roommates and prices to each item
+* [x] Create way for users to add roommates and prices to each item
+* [ ] Create way for total price of listed items to be displayed. Must adjust based on added and removed items.
+* [ ] Create way to add items to favorites list for recipe creation
 
 **Phase 3: Clean up current forms and features, then implement database**
 * [ ] Adjust forms so that they don't submit without the appropriate data and provide error feedback to users
