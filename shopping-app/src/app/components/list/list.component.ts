@@ -13,14 +13,16 @@ export class ListComponent implements OnInit {
 items$: Item[] = [];
 // @Output() selectItem = new EventEmitter<Item>();
 selectedItem: Item;
-totalPrice: number;
+totalPrice;
 
   constructor(private dbs: DatabaseService, private itemService: ItemService) { 
-    this.totalPrice = this.retrieveTotalPrice();
+    this.totalPrice = this.calculateTotalPrice();
   }
 
   ngOnInit() {
     this.items$ = this.dbs.retrieveItems();
+    this.calculateTotalPrice();
+    // this.retrieveTotalPrice();
     // console.log(typeof(this.totalPrice));
   }
 
@@ -51,10 +53,17 @@ totalPrice: number;
     console.log('Editing item...', id);
   }
 
-  /* Method to get the total price for each item on the list */
-  retrieveTotalPrice() {
-    return this.itemService.getTotalPrice();
+  /* Method to calculate and retrieve the total price for each item on the list */
+  calculateTotalPrice() {
+    this.totalPrice = 0;
+    this.items$.map((item) => {
+      this.totalPrice += item.price;
+    });
   }
+
+  // retrieveTotalPrice() {
+  //   this.calculateTotalPrice();
+  // }
 
   updatePrice(item: Item) {
     /* Updates the price based on whether an item is added or removed. Right now it's just subtracting */
