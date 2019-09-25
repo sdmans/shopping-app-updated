@@ -63,10 +63,6 @@ totalPrice;
     });
   }
 
-  // retrieveTotalPrice() {
-  //   this.calculateTotalPrice();
-  // }
-
   updatePrice(item: Item) {
     /* Updates the price based on whether an item is added or removed. Right now it's just subtracting */
     this.totalPrice -= item.price;
