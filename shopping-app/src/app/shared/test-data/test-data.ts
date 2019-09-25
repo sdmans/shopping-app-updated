@@ -112,7 +112,8 @@ export const testRecipes = [
           description: 'A dozen eggs for scramblin',
           note: 'Get the cage free kind!',
           category: 'food',
-          id: 'jkl'
+          id: 'jkl', 
+          price: 5.99
         },
         {
           name: 'cheese',
@@ -121,7 +122,8 @@ export const testRecipes = [
           description: 'Block or shredded cheddar cheese',
           note: 'Chedder if they have it',
           category: 'food',
-          id: 'mno'
+          id: 'mno',
+          price: 3.99
         },
         {
           name: 'Butter',
@@ -130,7 +132,8 @@ export const testRecipes = [
           description: 'A stick or bar of butter',
           note: 'Kerrygold Irish Butter, but any butter will do!',
           category: 'food',
-          id: 'pqr'
+          id: 'pqr',
+          price: 2.99
         }
       ]
     },
@@ -144,8 +147,8 @@ export const testRecipes = [
           description: 'Stop & Shop Boneless Ribeye Steak',
           note: 'If you can, get 2 of these!',
           category:'food',
-          id: 'stu'
-
+          id: 'stu',
+          price: 8.99
         },
         {
           name: 'Sweet Potato',
@@ -154,7 +157,8 @@ export const testRecipes = [
           description: "Sweet potatoes, they have purple skin and orange insides!",
           note: 'If they have the japanese yellow sweet potatoes, get those!',
           category:'food',
-          id: 'vwx'
+          id: 'vwx',
+          price: 2.99
 
         },
         {
@@ -164,8 +168,8 @@ export const testRecipes = [
           description: 'Fresh Broccoli Crowns',
           note: 'Get 3 of these',
           category:'food',
-          id: 'yzb'
-
+          id: 'yzb',
+          price: 1.99
         },
         {
           name: 'Butter',
@@ -174,7 +178,8 @@ export const testRecipes = [
           description: 'A stick or bar of butter',
           note: 'Kerrygold Irish Butter, but any butter will do!',
           category: 'food',
-          id: 'bab'
+          id: 'bab',
+          price: 2.99
         }
       ]
     }
