@@ -8,6 +8,15 @@
     width: 100%;
   }
 
+  .submit-form-container > form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+
   .mat-radio-button ~ .mat-radio-button {
     margin-left: 16px;
   }
