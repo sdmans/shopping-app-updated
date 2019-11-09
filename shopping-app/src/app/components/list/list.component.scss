@@ -39,21 +39,29 @@ i.tile-icon {
     font-size: 50px;
     cursor: pointer;
     @media (max-width: $before-mobile-width) {
-        font-size: 34px;
+        font-size: 40px;
     }
 
     @media(max-width: $mobile-width) {
-        font-size: 24px;
+        font-size: 30px;
+        margin-top: 4px;
+        margin-bottom: 4px;
     }
 }
 
 i.tile-icon:nth-child(2n) {
-    margin-top: 50px;
-    @media(max-width: $before-mobile-width) {
-        margin-top: 35px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    @media(max-width: $before-mobile-width) and (min-width: $mobile-width) {
+        margin-top: 20px;
+        margin-bottom: 20px;
     }
-    @media(max-width: $mobile-width) {
-        margin-top: 10px;
+
+}
+
+.edit-icon {
+    @media(max-width: $before-mobile-width) {
+        display: none;
     }
 }
 

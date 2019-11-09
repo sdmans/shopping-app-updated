@@ -12,8 +12,9 @@
         <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">     
                 <img src="{{item.image}}" alt="{{item.name}}">
             <div class="feature-container">
+                <i class="material-icons tile-icon" (click)="removeItem($event, item.id, i)">add_circle_outline</i>
+                <i class="material-icons tile-icon edit-icon" (click)="editItem($event, item.id)">edit</i>
                 <i class="material-icons tile-icon" (click)="removeItem($event, item.id, i)">delete</i>
-                <i class="material-icons tile-icon" (click)="editItem($event, item.id)">edit</i>
             </div>
         </mat-grid-tile>
 </mat-grid-list>
