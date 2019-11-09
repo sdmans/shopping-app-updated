@@ -7,7 +7,8 @@
 
 <h3>Item List</h3>
 <div class="list-container">
-<mat-grid-list cols="2" rowHeight="2:1">
+<p *ngIf="items$.length === 0">There are no items currently added to your shopping list</p>
+<mat-grid-list *ngIf="items$.length > 0" cols="2" rowHeight="2:1">
         <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">     
                 <img src="{{item.image}}" alt="{{item.name}}">
             <div class="feature-container">
