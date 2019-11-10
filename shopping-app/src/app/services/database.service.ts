@@ -52,6 +52,21 @@ export class DatabaseService {
     return this.singleItem;
   }
 
+  toggleFavoriteItem(id: string) {
+    this.items$.map((item: Item) => {
+      if(item.id === id) {
+        if(!item.favorited) {
+          item.favorited = true;
+          console.log("Status:", item.favorited);
+        } else {
+          item.favorited = false;
+          console.log("Status:", item.favorited);
+        }
+        
+      }
+    });
+  }
+
   setSelectedItem(item: Item) {
     this.selectedItem$ = item;
     console.log(this.selectedItem$);

@@ -49,6 +49,13 @@ export class ItemService {
     this.dbs.addRecipeItems(items);
   }
 
+  /* Add Item to Favorites List */
+
+  favoriteItem(item: Item) {
+    console.log("Toggling item favorite status:", item.id);
+      this.dbs.toggleFavoriteItem(item.id);
+  }
+
   /* Retrieves a list of favorite items from database. May be used to sort retrieved data later */
   getFavorites() {
     console.log(this.listItems);

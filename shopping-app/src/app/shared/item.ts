@@ -12,12 +12,13 @@ export class Item {
     name: string;
     link: string;
     image: string;
+    category: string;
     price?: number;
     checked?: boolean; 
     priority?: string;
     description?: string;
     note?: string;
-    category: string;
+    favorited?: boolean;
     quantity?: number;
     datePosted?: number;
     lastOrdered?: number;

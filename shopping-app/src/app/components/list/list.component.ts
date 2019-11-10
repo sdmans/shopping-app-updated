@@ -53,6 +53,11 @@ totalPrice;
     console.log('Editing item...', id);
   }
 
+  favoriteItem(event: Event, item: Item) {
+    event.stopPropagation();
+    this.itemService.favoriteItem(item);
+  }
+
   /* Method to calculate and retrieve the total price for each item on the list */
   calculateTotalPrice() {
     this.totalPrice = 0;
