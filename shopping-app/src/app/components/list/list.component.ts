@@ -3,6 +3,7 @@ import { DatabaseService } from '../../services/database.service';
 import { ItemService } from 'src/app/services/item.service';
 import { Output, EventEmitter } from '@angular/core'; //For component interaction
 import { Item } from './../../shared/item';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-list',
@@ -15,7 +16,7 @@ items$: Item[] = [];
 selectedItem: Item;
 totalPrice;
 
-  constructor(private dbs: DatabaseService, private itemService: ItemService) { 
+  constructor(private dbs: DatabaseService, private itemService: ItemService, private router: Router) { 
     this.totalPrice = this.calculateTotalPrice();
   }
 
@@ -51,6 +52,7 @@ totalPrice;
   editItem(event: Event, id) {
     event.stopPropagation();
     console.log('Editing item...', id);
+    this.router.navigate([`items/${id}/edit`]);
   }
 
   favoriteItem(event: Event, item: Item) {

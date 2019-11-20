@@ -69,7 +69,7 @@ export class DatabaseService {
 
   setSelectedItem(item: Item) {
     this.selectedItem$ = item;
-    console.log(this.selectedItem$);
+    // console.log(this.selectedItem$);
     return this.selectedItem$;
   }
 

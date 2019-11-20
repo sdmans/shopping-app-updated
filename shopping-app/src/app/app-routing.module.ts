@@ -22,6 +22,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'create', component: CreateRecipeComponent },
   { path: 'items/:id' , component: ItemDetailComponent },
+  { path: 'items/:id/edit' , component: ItemDetailComponent },
   { path: '',
   redirectTo: 'main',
   pathMatch: 'full'

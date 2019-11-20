@@ -50,7 +50,6 @@ export class ItemService {
   }
 
   /* Add Item to Favorites List */
-
   favoriteItem(item: Item) {
     console.log("Toggling item favorite status:", item.id);
       this.dbs.toggleFavoriteItem(item.id);
