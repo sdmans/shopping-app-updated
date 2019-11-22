@@ -1,6 +1,6 @@
 <button mat-button color="accent" (click)="goBack()">Go Back</button>
 <div *ngIf="item" class="item-preview-container">
-        <h3>Item Preview</h3>
+        <h3>Item Preview <span *ngIf="editMode">(Edit View)</span></h3>
         <p><b>{{item.name | titlecase}}</b></p>
         <img class="preview-img" src="{{item.image}}" onError="this.src='https://via.placeholder.com/200x200'" alt="item.name">
      <div *ngIf="item.description.length > 0" class="item-info">
