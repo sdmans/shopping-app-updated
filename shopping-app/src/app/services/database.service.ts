@@ -9,6 +9,7 @@ import { testRoommates } from '../shared/test-data/test-data';
 import { testLocations } from '../shared/test-data/test-data';
 import { favoriteItems } from '../shared/test-data/test-data';
 import { testRecipes } from '../shared/test-data/test-data';
+import { categories } from '../shared/test-data/test-data';
 
 //Modules for rxjs Observables
 import { Observable } from 'rxjs';
@@ -23,6 +24,7 @@ export class DatabaseService {
   locations: Location[] = testLocations;
   favorites: Item[] = favoriteItems; 
   recipes$ = testRecipes;
+  categories$: string[] = categories;
 
 
   selectedItem$: Item;//For detail component on main page
@@ -30,27 +32,6 @@ export class DatabaseService {
 
   constructor() { }
 
-  /* Methods for adding and retrieving items */
-  addItem(item): void {
-    this.items$.push(item);
-    console.log(this.items$);
-  }
-
-  retrieveItems() {
-    return this.items$;
-  }
-
-  getItemById(id: string) {
-    // console.log(id);
-    this.items$.map((item) => {
-      if(item.id === id) {
-        
-        this.singleItem = item;
-        // console.log("Currently viewing single item:", this.singleItem);
-      }
-    })
-    return this.singleItem;
-  }
 
   toggleFavoriteItem(id: string) {
     this.items$.map((item: Item) => {
@@ -73,17 +54,16 @@ export class DatabaseService {
     return this.selectedItem$;
   }
 
-  getSelectedItem() {
-    // const selectedItemObservable = of(this.selectedItem$);
-    // return selectedItemObservable;
-    return this.selectedItem$;
-  }
 
-
-  /* Methods for adding and retrieving recipes */
+  /* Methods for adding data */
   /* Adds a new recipe to list of recipes */
   addRecipe(recipe) {
     this.recipes$.push(recipe);
+  }
+
+  addItem(item): void {
+    this.items$.push(item);
+    console.log(this.items$);
   }
 
   /* Adds items from recipe to shopping list */
@@ -103,6 +83,15 @@ export class DatabaseService {
   addLocation(newLocale: Location) {
     this.locations.push(newLocale);
   }
+/* General methods for retrieving data */
+  getCategories() {
+    //Retrieve a list of categories
+    return this.categories$;
+  }
+
+  retrieveItems() {
+    return this.items$;
+  }
 
   getRoommates() {
     return this.roommates;
@@ -118,6 +107,25 @@ export class DatabaseService {
 
   getRecipes() {
     return this.recipes$;
+  }
+
+  /* Specific data retrieval methods */
+  getSelectedItem() {
+    // const selectedItemObservable = of(this.selectedItem$);
+    // return selectedItemObservable;
+    return this.selectedItem$;
+  }
+
+  getItemById(id: string) {
+    // console.log(id);
+    this.items$.map((item) => {
+      if(item.id === id) {
+        
+        this.singleItem = item;
+        // console.log("Currently viewing single item:", this.singleItem);
+      }
+    })
+    return this.singleItem;
   }
   
 }

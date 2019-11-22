@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ItemService } from '../../services/item.service';
+import { DatabaseService } from './../../services/database.service';
 import { Item } from '../../shared/item';
 import { FormBuilder, FormGroup, FormArray, FormControl, FormGroupDirective, NgForm, Validators, ValidatorFn } from '@angular/forms';
 import {ErrorStateMatcher} from '@angular/material/core';
@@ -21,6 +22,7 @@ export class CreateRecipeComponent implements OnInit {
   favorites: Item[];
   selectedItems = [];
   recipeName: string;
+  categories$: string[];
 
   nameFormControl = new FormControl('', [
     Validators.required
@@ -28,13 +30,15 @@ export class CreateRecipeComponent implements OnInit {
 
   matcher = new MyErrorStateMatcher();
 
-  constructor(private itemService: ItemService, private formBuilder: FormBuilder) { 
+  constructor(private itemService: ItemService, private formBuilder: FormBuilder, private databaseService: DatabaseService) { 
     
     this.favorites = this.itemService.getFavorites();
+    this.categories$ = this.databaseService.getCategories();
   }
 
   ngOnInit() {
     console.log(this.favorites);
+    console.log(this.categories$);
   }
 
   addItem(selectedItem) {

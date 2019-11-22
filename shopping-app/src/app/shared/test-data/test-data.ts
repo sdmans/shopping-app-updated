@@ -35,6 +35,17 @@ export const testLocations = [
     },
 ];
 
+export const categories = [
+  "food",
+  "drinks",
+  "cleaning",
+  "hygiene",
+  "toiletries",
+  "cosmetics",
+  "cooking",
+  "supplies"
+];
+
 export const listItems = [
         {
             name: 'Eggs',
