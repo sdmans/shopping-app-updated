@@ -64,8 +64,8 @@ totalPrice;
   calculateTotalPrice() {
     this.totalPrice = 0;
     this.items$.map((item) => {
-      console.log("item price list", item);
-      console.log(typeof item.price, item.price);
+      // console.log("item price list", item);
+      // console.log(typeof item.price, item.price);
       this.totalPrice += item.price;
     });
   }

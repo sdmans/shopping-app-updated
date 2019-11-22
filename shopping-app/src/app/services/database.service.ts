@@ -41,12 +41,12 @@ export class DatabaseService {
   }
 
   getItemById(id: string) {
-    console.log(id);
+    // console.log(id);
     this.items$.map((item) => {
       if(item.id === id) {
         
         this.singleItem = item;
-        console.log("Currently viewing single item:", this.singleItem);
+        // console.log("Currently viewing single item:", this.singleItem);
       }
     })
     return this.singleItem;

@@ -21,11 +21,19 @@ export class ItemDetailComponent implements OnInit {
     note: ""
   }
 
+  editMode: boolean = false;
+
   constructor(private route: ActivatedRoute, private location: Location, private dbs: DatabaseService) { }
 
   ngOnInit() {
     /* Checks if the item detail is set to the default value, then retrieves the item */
       this.getItem();
+      this.checkEditUrl();
+      if (this.editMode) {
+        console.log("Currently in edit mode!");
+      } else {
+        console.log("Normal view, not in edit mode!");
+      }
   }
 
   getItem() {
@@ -35,6 +43,16 @@ export class ItemDetailComponent implements OnInit {
 
   goBack(): void {
     this.location.back();
+  }
+
+  checkEditUrl() {
+    let url = this.route.snapshot.url;
+    if(url.length === 3 && url[2].path === "edit") {
+      console.log("Toggle edit mode!");
+      this.editMode = true;
+    } else {
+      this.editMode = false;
+    }
   }
 
 }
