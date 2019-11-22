@@ -81,5 +81,4 @@ export class CreateRecipeComponent implements OnInit {
     console.log("Array submitted, recipe contents emptied.", this.selectedItems);
   }
 
-
 }

@@ -21,20 +21,12 @@ export class SubmitFormComponent implements OnInit {
     category: 'food'
   }; //Needs a name, link, image and category at a minimum to display properly
 
-   _categories = [
-    "food",
-    "drinks",
-    "cleaning",
-    "hygiene",
-    "toiletries",
-    "cosmetics",
-    "cooking",
-    "supplies"
-  ];
+   _categories: string[];
 
-  constructor(private db: DatabaseService) { 
+  constructor(private databaseService: DatabaseService) { 
     this._item = new Item();//ngModel will give errors without the object being initiated first.
-    this.roommates = this.db.getRoommates();
+    this.roommates = this.databaseService.getRoommates();
+    this._categories = this.databaseService.getCategories();
   }
 
   ngOnInit() {
@@ -44,6 +36,6 @@ export class SubmitFormComponent implements OnInit {
   submitItem() {
     console.log(this._item);
     this.item.id = 'jkl';
-    this.db.addItem(this._item);
+    this.databaseService.addItem(this._item);
   }
 }
