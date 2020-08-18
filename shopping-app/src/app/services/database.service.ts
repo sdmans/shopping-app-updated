@@ -34,16 +34,20 @@ export class DatabaseService {
 
 
   toggleFavoriteItem(id: string) {
-    this.items$.map((item: Item) => {
+    this.items$.forEach((item: Item, index) => {
       if(item.id === id) {
-        if(!item.favorited) {
-          item.favorited = true;
-          console.log("Status:", item.favorited);
-        } else {
+        if (item.favorited) {
           item.favorited = false;
+          this.favorites.splice(index, 1);
           console.log("Status:", item.favorited);
+          console.log(this.favorites);
         }
-        
+        else {
+          item.favorited = true;
+          // console.log("Status:", item.favorited);
+          this.favorites.push(item);
+          console.log(this.favorites)
+        }
       }
     });
   }

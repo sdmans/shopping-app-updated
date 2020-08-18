@@ -11,6 +11,7 @@
 <mat-grid-list *ngIf="items$.length > 0" cols="2" rowHeight="2:1">
         <mat-grid-tile *ngFor="let item of items$; let i=index;" (click)="displayItem(item)">     
                 <img src="{{item.image}}" alt="{{item.name}}">
+                <sub *ngIf="item.favorited">{{item.favorited}}</sub>
             <div class="feature-container">
                 <i *ngIf="!item.favorited" class="material-icons tile-icon" (click)="favoriteItem($event, item)">add_circle_outline</i>
                 <i *ngIf="item.favorited" class="material-icons tile-icon" (click)="favoriteItem($event, item)">remove_circle</i>

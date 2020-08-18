@@ -10,8 +10,9 @@ h4 {
 }
 
 div.item-preview-container {
-    height: 500px;
+    min-height: 500px;
     margin-bottom: 40px;
+    padding: 5px;
     border: 1px solid pink;
 }
 
