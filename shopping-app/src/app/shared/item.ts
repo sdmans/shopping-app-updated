@@ -10,7 +10,7 @@ LastOrdered?: String
 export class Item {
     id?: string;
     name: string;
-    link: string;
+    link?: string;
     image: string;
     category: string;
     price?: number;
