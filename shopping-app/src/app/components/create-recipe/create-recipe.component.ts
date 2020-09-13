@@ -23,6 +23,8 @@ export class CreateRecipeComponent implements OnInit {
   selectedItems = [];
   recipeName: string;
   categories$: string[];
+  errorMessage: string;
+  isError: boolean = false;
 
   nameFormControl = new FormControl('', [
     Validators.required
@@ -31,14 +33,12 @@ export class CreateRecipeComponent implements OnInit {
   matcher = new MyErrorStateMatcher();
 
   constructor(private itemService: ItemService, private formBuilder: FormBuilder, private databaseService: DatabaseService) { 
-    
     this.favorites = this.itemService.getFavorites();
-    this.categories$ = this.databaseService.getCategories();
+    // this.categories$ = this.databaseService.getCategories();
   }
 
   ngOnInit() {
-    console.log(this.favorites);
-    console.log(this.categories$);
+    console.log("Current Favorites are", this.favorites);
   }
 
   addItem(selectedItem) {
@@ -59,6 +59,12 @@ export class CreateRecipeComponent implements OnInit {
   submitRecipe(name: string) {
     this.recipeName = name;
     if(this.selectedItems.length > 0 && this.recipeName !== undefined && this.recipeName.length > 0) {
+      // Check if an error is present and reset it upon successful submission
+      if(this.isError) {
+        this.errorMessage = "";
+        this.isError = false;
+      }
+
       const newRecipe = {
         name: this.recipeName,
         items: this.selectedItems
@@ -67,7 +73,9 @@ export class CreateRecipeComponent implements OnInit {
       this.itemService.addRecipe(newRecipe);
       this.resetRecipe();
     } else {
-      console.log('Recipe is empty, have you selected your items and given the recipe a name?');
+      //This code displays an error message
+      this.isError = true;
+      this.errorMessage = "This recipe is empty so you'll have to try again. Have you selected your items and given the recipe a name?"
     }
   }
 

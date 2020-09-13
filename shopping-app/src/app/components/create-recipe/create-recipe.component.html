@@ -21,9 +21,6 @@
     </mat-form-field>
 
     <mat-hint>Enter the name of your recipe!</mat-hint>
-    <!-- <mat-error *ngIf="nameFormControl.hasError('email') && !namelFormControl.hasError('required')">
-      Please enter a valid name
-    </mat-error> -->
     <mat-error *ngIf="nameFormControl.hasError('required') && !nameFormControl.untouched">
       Recipe name is <strong>required</strong>
     </mat-error>
@@ -38,7 +35,6 @@
         <p>Checked: {{fave.checked}}</p>
         <!-- <p>{{fave | json}}</p> -->
     </div>
-
-    
     <button mat-raised-button type="submit">Submit Recipe</button>
+    <p *ngIf="isError" class="error-message">{{errorMessage}}</p>
 </form>
